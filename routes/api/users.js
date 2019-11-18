@@ -4,10 +4,18 @@ const bcrypt = require('bcryptjs');
 const User = require('../../models/User');
 const jsw = require('jsonwebtoken');
 const key = require('../../config/keys');
-const validRegisterInput = require('../../validation/signup')
-const validLoginInput = require('../../validation/login')
+const validRegisterInput = require('../../validation/signup');
+const validLoginInput = require('../../validation/login');
+const passport = require('passport');
 
 router.get('./test',  (req, res) => res.json({ msg:  "You made it bud"}));
+
+router.get('/current', passport.authenticate('jwt', { session: false}), (req, res) =>{
+    res.json({
+        id: req.user.id,
+        email: req.user.email
+    })
+})
 
 router.post('/signup', (req, res) => {
     const { errors, isValid } = validRegisterInput(req.body);
@@ -36,9 +44,11 @@ router.post('/signup', (req, res) => {
                                 });
                             })
                             .catch( err => console.log(err))
-                })
-            }
-        })
+                    })
+                }
+            )
+        }
+    })
 })
 
 router.post('/login', (req, res) => {
