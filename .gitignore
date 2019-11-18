@@ -1,2 +1,4 @@
-/node_modules
 
+config
+node_modules
+frontend/node_modules
