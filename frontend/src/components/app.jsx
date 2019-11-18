@@ -1,0 +1,18 @@
+import React from 'react';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { Switch } from 'react-router-dom';
+
+import Splash from './splash';
+import LoginFormContainer from './forms/login_form_container';
+import SignupFormContainer from './forms/signup_form_container';
+
+
+const App = () => (
+    <Switch>
+        <AuthRoute exact path="/" component={Splash} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    </Switch>
+);
+
+export default App;
