@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const User = require('../../models/User');
-const jsw = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const key = require('../../config/keys');
 const validRegisterInput = require('../../validation/signup');
 const validLoginInput = require('../../validation/login');
@@ -19,10 +19,16 @@ router.get('/current', passport.authenticate('jwt', { session: false}), (req, re
 
 router.post('/signup', (req, res) => {
     const { errors, isValid } = validRegisterInput(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
     User.findOne({ email: req.body.email })
         .then( user => {
             if (user) {
-                return res.status(400).json({ email: "That Email is already registered"})
+                errors.email = "That Email is already registered"
+                return res.status(400).json({errors})
             } else {
                 const newUser = new User({
                     email: req.body.email,
