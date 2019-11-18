@@ -27,6 +27,7 @@ function Copyright() {
       <Link color="inherit" href="https://material-ui.com/">
         Weave
       </Link>{" "}
+  
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -67,7 +68,12 @@ export default function SignInSide() {
   const classes = useStyles();
 
   return (
+
     <Grid container component="main" className={classes.root}>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+      <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap' />
+
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>

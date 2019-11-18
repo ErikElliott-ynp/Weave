@@ -8,6 +8,8 @@ const SessionErrorsReducer = (state = _nullErrors, action) => {
     switch (action.type) {
         case RECEIVE_SESSIONS_ERRORS:
             return action.errors;
+        case RECEIVE_CURRENT_USER:
+            return _nullErrors;
         default:
             return state;
     }

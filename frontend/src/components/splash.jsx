@@ -6,6 +6,7 @@ class Splash extends React.Component {
         return (
             <div>
                 {/* Zak's Layout Here */}
+                <h2>KEvin did this</h2>
             </div>
         );
     }
