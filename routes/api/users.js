@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const User = require('../../models/User')
+const User = require('../../models/User');
+const jsw = require('jsonwebtoken');
+const key = require('../../config/keys');
 
 router.get('./test',  (req, res) => res.json({ msg:  "You made it bud"}));
 
@@ -24,6 +26,20 @@ router.post('/signup', (req, res) => {
                             .catch( err => console.log(err))
                     })
                 })
+            }
+        })
+})
+
+router.post('/login', (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    user.findOne({ email })
+        .then( user => {
+            if (!user) {
+                return resjson({ msg: "Success"})
+            } else {
+                return res.status(400).json({ password: "Incorrect Password"})
             }
         })
 })
