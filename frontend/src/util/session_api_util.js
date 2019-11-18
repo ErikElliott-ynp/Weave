@@ -1,7 +1,10 @@
-import jquery from "jquery";
+import axios from 'axios';
+
 
 export const setAuthToken = token  => {
     if (token) {
-        jquery.beforeSend
+        axios.defaults.headers.common['Authorization'] = token;
+    } else {
+        delete axios.defaults.headers.common['Authoricaitons'];
     }
-}
+};
