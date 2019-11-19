@@ -8,8 +8,7 @@ class SessionForm extends React.Component {
     this.state = {
       email: '',
       password: '',
-      password2: '',
-      errors: {}
+      password2: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,7 +17,7 @@ class SessionForm extends React.Component {
 
   // Once the user has been authenticated, redirect to the Tweets page
   componentWillReceiveProps(nextProps) {
-    if (nextProps.currentUser === true) {
+    if (nextProps.signedIn === true) {
       this.props.history.push('/dashboard');
     }
 
@@ -52,9 +51,9 @@ class SessionForm extends React.Component {
   renderErrors() {
     return (
       <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
+        {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
-            {this.state.errors[error]}
+            {error}
           </li>
         ))}
       </ul>
@@ -68,7 +67,7 @@ class SessionForm extends React.Component {
           <input
             className='password2'
             type='password'
-            value={this.state.password}
+            value={this.state.password2}
             onChange={this.update('password2')}
             placeholder='Password Confirmation'
           />

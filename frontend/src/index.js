@@ -5,8 +5,7 @@ import configureStore from './/store/store';
 import jwt_decode from 'jwt-decode';
 import { setAuthToken } from "./util/session_api_util";
 import { logout, signup, login } from "./actions/session_actions";
-import './styles/app.scss';
-
+import "../src/styles/app.scss"
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -33,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.signup = signup;
     window.login = login;
+    window.logout = logout;
 
     const root = document.getElementById('root');
 
