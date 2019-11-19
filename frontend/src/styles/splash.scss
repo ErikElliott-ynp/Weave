@@ -1,91 +1,124 @@
-.splash {
-    display: flex;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
-}
-
-.splash-left {
-    height: 100%;
-    width: 70%;
-}
-
-.splash-left .header {
-    display: flex;
-    align-items: center;
-}
-
-.splash-left .banner {
-    // background-image: url(images/image-ginger-cat-page-under-construction.png);
-    height: 389px;
-    width: 583px;
-}
-
-.splash-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 50%;
-    margin-right: 80px;
-}
-
-// .demo-container {
+// .splash {
+//     display: flex;
+//     justify-content: space-evenly;
 //     height: 100%;
 //     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     color: #424242;
-//     background-color: #B0A1BA;
 // }
 
-
-// .splash-title {
-//     color: #222222;
-//     font-weight: 700;
-//     font-size: 32px;
+// .splash-left {
+//     height: 100%;
+//     width: 70%;
 // }
 
-// .form-container h1 {
-//     color: #424242;
-//     margin-bottom: 21px;
-// }
-
-// .input-container .email {
-//     padding: 6px;
-//     margin-bottom: 9px;
-//     color: #424242;
-// }
-
-// .input-container .password {
-//     padding: 6px;
-//     color: #424242;
-// }
-
-// .input-container .login {
-//     margin-top: 15px;
-//     float: right;
-//     color: #424238;
-//     border: 2px solid #737373;
-//     border-radius: 5%;
-//     background-color: #B0A1BA;
-//     font-size: 16px;
-// }
-
-// .form-switch {
-//     color: #ae7cd2;
-//     border: none;
-//     background: none;
-// }
-
-// .splash-group-info {
-//     color: #424242;
-//     background-color: #B0A1BA;
-//     height: 100px;
-//     width: 100px;
-//     border-radius: 50%;
+// .splash-left .header {
 //     display: flex;
 //     align-items: center;
-//     justify-content: center;
-//     border: 2px solid #737373;
 // }
+
+// .splash-left .banner {
+//     // background-image: url(images/image-ginger-cat-page-under-construction.png);
+//     height: 389px;
+//     width: 583px;
+// }
+
+// .splash-right {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     height: 50%;
+//     margin-right: 80px;
+// }
+
+// // .demo-container {
+// //     height: 100%;
+// //     width: 100%;
+// //     display: flex;
+// //     justify-content: center;
+// //     align-items: center;
+// //     color: #424242;
+// //     background-color: #B0A1BA;
+// // }
+
+
+// // .splash-title {
+// //     color: #222222;
+// //     font-weight: 700;
+// //     font-size: 32px;
+// // }
+
+// // .form-container h1 {
+// //     color: #424242;
+// //     margin-bottom: 21px;
+// // }
+
+// // .input-container .email {
+// //     padding: 6px;
+// //     margin-bottom: 9px;
+// //     color: #424242;
+// // }
+
+// // .input-container .password {
+// //     padding: 6px;
+// //     color: #424242;
+// // }
+
+// // .input-container .login {
+// //     margin-top: 15px;
+// //     float: right;
+// //     color: #424238;
+// //     border: 2px solid #737373;
+// //     border-radius: 5%;
+// //     background-color: #B0A1BA;
+// //     font-size: 16px;
+// // }
+
+// // .form-switch {
+// //     color: #ae7cd2;
+// //     border: none;
+// //     background: none;
+// // }
+
+// // .splash-group-info {
+// //     color: #424242;
+// //     background-color: #B0A1BA;
+// //     height: 100px;
+// //     width: 100px;
+// //     border-radius: 50%;
+// //     display: flex;
+// //     align-items: center;
+// //     justify-content: center;
+// //     border: 2px solid #737373;
+// // }
+
+
+/* Element | http://localhost:3000/#/ */
+
+.MuiPaper-root {
+  height: 100vh;
+  border-left-width: 0px;
+  border-left-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Element | http://localhost:3000/#/ */
+
+.MuiAvatar-root {
+  border-left-width: 0px;
+  border-left-style: solid;
+  margin-left: 369px;
+  border-top-width: 0px;
+  border-top-style: solid;
+  margin-top: 10px;
+}
+
+/* Element | http://localhost:3000/#/ */
+
+h1.MuiTypography-root {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+    z-index: 1;
+}

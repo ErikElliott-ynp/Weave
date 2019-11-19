@@ -57,94 +57,119 @@ const useStyles = makeStyles(theme => ({
 }));
 
 class SignInSide extends React.Component {
-  
-  
-  render() {
-    const { classes } = this.props;
+  constructor(props) {
+    super(props);
+    this.state = {
+      signupForm: false
+    }
 
-      return (
-        <Grid container component="main" className={classes.root}>
-          <CssBaseline />
-          <Grid item xs={false} sm={4} md={7} className={classes.image} />
-          <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-            <div className={classes.paper}>
-              <Avatar className={classes.avatar}>
-                <LockOutlinedIcon />
-              </Avatar>
-              <Typography component="h1" variant="h5">
-                Sign in
-              </Typography>
-              <form className={classes.form} noValidate>
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  autoFocus
-                />
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
-                />
+    this.formSwitch = this.formSwitch.bind(this);
+  }
 
-                <TextField
-                  variant="outlined"
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="password"
-                  label="Confirm Password"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
-                />
+  formSwitch() {
+    this.setState({ signupForm: !this.state.signupForm })
+  }
 
-                <FormControlLabel
-                  control={<Checkbox value="remember" color="primary" />}
-                  label="Remember me"
-                />
-                <Button
-                
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  color="primary"
-                  className={classes.submit}
-                >
-                  Sign In
-                </Button>
-                <Grid container>
-                  <Grid item xs>
-                    <Link href="#" variant="body2">
-                      Forgot password?
-                    </Link>
-                  </Grid>
-                  <Grid item>
-                    <Link href="#" variant="body2">
-                      {"Don't have an account? Sign Up"}
-                    </Link>
-                  </Grid>
-                </Grid>
-                <Box mt={5}>
-                  <Copyright />
-                </Box>
-              </form>
-            </div>
-          </Grid>
-        </Grid>
-      );
+  formSwitchButtonText() {
+    if (!this.state.signupForm) {
+      return 'Sign up Instead.'
+    } else {
+      return 'Login?'
     }
   }
 
-  export default withStyles(useStyles)(SignInSide);
+  formTypeText() {
+    if (!this.state.signupForm) {
+      return 'Login'
+    } else {
+      return 'Sign up'
+    }
+  }
+
+
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <Grid container component="main" className={classes.root}>
+        <CssBaseline />
+        <Grid item xs={false} sm={4} md={7} className={classes.image} />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <div className={classes.paper}>
+            <Avatar className={classes.avatar}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              {this.formTypeText()}
+            </Typography>
+            <form className={classes.form} noValidate>
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email"
+                name="email"
+                autoComplete="email"
+                autoFocus
+              />
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+              />
+
+              <TextField
+                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Confirm Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+              />
+
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
+              />
+              <Button
+
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                {this.formTypeText()}
+              </Button>
+              <Grid container>
+                <Grid item xs>
+                </Grid>
+                <Grid item>
+                  <Link onClick={this.formSwitch} href="#" variant="body2">
+                    {this.formSwitchButtonText()}
+                  </Link>
+                </Grid>
+              </Grid>
+              <Box mt={5}>
+                <Copyright />
+              </Box>
+            </form>
+          </div>
+        </Grid>
+      </Grid>
+    );
+  }
+}
+
+export default withStyles(useStyles)(SignInSide);
