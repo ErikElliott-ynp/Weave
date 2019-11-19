@@ -26,9 +26,9 @@ class Splash extends React.Component {
 
     formSwitchButtonText() {
         if (!this.state.signupForm) {
-            return 'Login'
-        } else {
             return 'Sign up Instead'
+        } else {
+            return 'Login'
         }
     }
 
