@@ -3,15 +3,17 @@ import { signup } from '../../actions/session_actions';
 import SignupForm from './session_form';
 
 const mapStateToProps = (state) => {
+
     return {
-        signedIn: state.session.isSignedIn,
-        errors: state.errors.session
+        signedIn: !!state.session.user,
+        errors: state.errors.session,
+        formName: 'Sign Up'
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        signup: user => dispatch(signup(user))
+        process: user => dispatch(signup(user))
     }
 }
 
