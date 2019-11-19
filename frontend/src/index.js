@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.signup = signup;
     window.login = login;
+    window.logout = logout;
 
     const root = document.getElementById('root');
 
