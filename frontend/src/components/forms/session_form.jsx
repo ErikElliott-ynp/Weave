@@ -17,7 +17,7 @@ class SessionForm extends React.Component {
 
   // Once the user has been authenticated, redirect to the Tweets page
   componentWillReceiveProps(nextProps) {
-    if (nextProps.currentUser === true) {
+    if (nextProps.signedIn === true) {
       this.props.history.push('/dashboard');
     }
 
