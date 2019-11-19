@@ -5,7 +5,6 @@ import * as APIUtil from "../util/session_api_util";
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSIONS_ERRORS = "RECEIVE_SESSION_ERRORS";
-export const RECEIVE_USER_SIGN_IN = "RECEIVE_USER_SIGN_IN";
 
 export const receiveCurrentUser = currentUser => {
     return {
@@ -50,6 +49,6 @@ export const login = user => dispatch => {
 
 export const logout = () => dispatch => {
     localStorage.removeItem('jwtToken')
-    return APIUtil.setAuthToken(false)
-        .then( () => dispatch(logoutUser()));
+    APIUtil.setAuthToken(false)
+    dispatch(logoutUser())
 };
