@@ -54,7 +54,7 @@ class Splash extends React.Component {
                     </div>
 
                     <div className='banner'>
-                        {/* Replace with png*/}
+                        <MyFirstGrid />
                     </div>
                 </div>
 
