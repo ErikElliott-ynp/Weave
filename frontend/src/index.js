@@ -5,7 +5,10 @@ import configureStore from './/store/store';
 import jwt_decode from 'jwt-decode';
 import { setAuthToken } from "./util/session_api_util";
 import { logout, signup, login } from "./actions/session_actions";
-import "../src/styles/app.scss"
+import './styles/app.scss';
+import '../node_modules/react-grid-layout/css/styles.css';
+import '../node_modules/react-resizable/css/styles.css';
+
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
