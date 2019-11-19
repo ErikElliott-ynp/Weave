@@ -4,10 +4,11 @@ const _nullErrors = [];
 
 const SessionErrorsReducer = (state = _nullErrors, action) => {
     Object.freeze(state);
-
     switch (action.type) {
         case RECEIVE_SESSIONS_ERRORS:
-            return action.errors;
+            let errors = []
+            action.errors.forEach( err => errors.push(Object.values(err)))
+            return Object.values(errors);
         case RECEIVE_CURRENT_USER:
             return _nullErrors;
         default:

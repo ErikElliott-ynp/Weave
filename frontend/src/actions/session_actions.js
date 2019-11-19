@@ -28,8 +28,8 @@ export const receiverErrors = errors => {
 
 export const signup = user => dispatch => {
     return APIUtil.signup(user)
-        .then( user => dispatch(receiveCurrentUser(user))
-        , err => dispatch(receiverErrors(err.response.data))
+        .then( user => ( dispatch(receiveCurrentUser(user))
+        ), err => dispatch(receiverErrors(Object.values(err.response.data)))
         )
 };
 
@@ -42,7 +42,7 @@ export const login = user => dispatch => {
             const decoded = jwt_decode(token);
             dispatch(receiveCurrentUser(decoded))
         },
-        err => dispatch(receiverErrors(err.response.data))
+        err => dispatch(receiverErrors(Object.values(err.response.data)))
         )
 }
 
