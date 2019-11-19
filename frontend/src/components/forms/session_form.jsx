@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
     this.state = {
       email: '',
       password: '',
+      password2: '',
       errors: {}
     };
 
@@ -40,7 +41,8 @@ class SessionForm extends React.Component {
 
     let user = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      password2: this.state.password2
     };
 
     this.props.process(user);
@@ -59,25 +61,46 @@ class SessionForm extends React.Component {
     );
   }
 
+  signUpPassword2() {
+    if (this.props.formName === 'Sign Up') {
+      return (
+        <div>
+          <input
+            className='password2'
+            type='password'
+            value={this.state.password}
+            onChange={this.update('password2')}
+            placeholder='Password Confirmation'
+          />
+          <br/>
+        </div>
+      )
+    } else {
+      return null;
+    }
+  }
+
   render() {
+
     return (
       <div className='form'>
         <h1>{this.props.formName}</h1>
         <form onSubmit={this.handleSubmit}>
           <div className='input-container'>
-            <input type="text"
+            <input type='text'
               value={this.state.email}
               onChange={this.update('email')}
-              placeholder="Email"
+              placeholder='Email'
             />
             <br />
-            <input type="password"
+            <input type='password'
               value={this.state.password}
               onChange={this.update('password')}
-              placeholder="Password"
+              placeholder='Password'
             />
             <br />
-            <input type="submit" value={this.props.formName} />
+            {this.signUpPassword2()}
+            <input type='submit' value={this.props.formName} />
             {this.renderErrors()}
           </div>
         </form>
