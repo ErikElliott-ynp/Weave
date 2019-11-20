@@ -5,7 +5,7 @@ const db = require('./config/keys').mongoURI;
 const users = require('./routes/api/users');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-
+const youtube = require('./routes/api/youtube');
 
 mongoose
     .connect(db, { useNewUrlParser: true })
@@ -22,6 +22,7 @@ require('./config/passport')(passport);
 
 app.use('/api/users', users);
 
+app.use('/api/youtube', youtube);
 
 const port = process.env.PORT || 5000;
 

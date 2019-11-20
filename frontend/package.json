@@ -18,7 +18,8 @@
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.23.6"
+    "sass": "^1.23.6",
+    "unirest": "^0.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
