@@ -16,7 +16,8 @@ class MyFirstGrid extends React.Component {
         ];
         return (
             <GridLayout 
-            className={layout}
+            className="layout"
+            layout={layout}
             autoSize={false} 
             verticalCompact={false} 
             cols={12} 
@@ -30,8 +31,8 @@ class MyFirstGrid extends React.Component {
             </div>
 
             <div key="b">
-              <Paper className="">
-
+              <Paper className="youtube-container">
+                    <YoutubeContainer />
               </Paper>
             </div>
 
