@@ -14,13 +14,14 @@ class MyFirstGrid extends React.Component {
             { i: 'e', x: 10, y: 0, w: 3, h: 9 },
         ];
         return (
-          <GridLayout
-            className="layout"
-            layout={layout}
-            cols={12}
-            width={950}
-            rowHeight={30}
-          >
+            <GridLayout 
+            className={layout}
+            autoSize={false} 
+            verticalCompact={false} 
+            cols={12} 
+            rowHeight={30} 
+            width={1125}>
+                
             <div key="a">
               <Paper className="">
 
