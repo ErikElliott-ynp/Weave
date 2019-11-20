@@ -5,6 +5,8 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import MenuButton from "./menu_button";
+
 
 
 const drawerWidth = 140;
@@ -37,7 +39,6 @@ export default function PermDrawer() {
 
   return (
     <div className={classes.root}>
-
       <Drawer
         className={classes.drawer}
         variant="permanent"
@@ -46,18 +47,19 @@ export default function PermDrawer() {
         }}
         anchor="left"
       >
-    <Divider />
+        <Divider />
 
         <List>
           {["YouTube", "Imgr", "Spotify"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
-            </ListItem>
+            <MenuButton>
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            </MenuButton>
           ))}
         </List>
 
-    <Divider />
-
+        <Divider />
       </Drawer>
     </div>
   );
