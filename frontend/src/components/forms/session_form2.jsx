@@ -88,6 +88,8 @@ class SignInSide extends React.Component {
 
     return (
 <div>
+              <Paper>
+
         <CssBaseline />
 
           <div className={classes.paper}>
@@ -97,6 +99,7 @@ class SignInSide extends React.Component {
             <Typography component="h1" variant="h5">
               {this.formTypeText()}
             </Typography>
+
             <form className={classes.form} noValidate>
               <TextField
                 variant="outlined"
@@ -161,6 +164,7 @@ class SignInSide extends React.Component {
               </Box>
             </form>
           </div>
+              </Paper>
       </div>
     );
   }
