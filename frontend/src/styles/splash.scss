@@ -127,10 +127,12 @@ h1.MuiTypography-root {
     display: flex;
     justify-content: flex-end;
     align-content: flex-start;
+    background: transparent;
 }
 
 .bigDaddyFlex {
     display: flex;
+    background: transparent;
 }
 
 .lilHomieForm {
@@ -146,17 +148,6 @@ margin-right: 0px;
 padding-left: 10px;
 }
 
-.finstaTheSpinsta {
-background: coral;
-}
-
-// .yeetThatTweet {
-// background: skyblue;
-// }
-
-// .rodeIt {
-// background: crimson;
-// }
 
 .MuiPaper-root {
     width: 100%;
@@ -167,3 +158,70 @@ background: coral;
     max-width: 500px;
     max-height: 500px;
 }
+
+.flashTheFlashy {
+    z-index: -99;
+}
+
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+.yeetThatTweet {
+  background: #e4572e;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(3) > div:nth-child(1) {
+  background: #f3a712;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+.finstaTheSpinsta {
+  background: #08a4bd;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(4) > div:nth-child(1) {
+  background: #657eeb;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(5) > div:nth-child(1) {
+  background: #29335c;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(2) > div:nth-child(1) {
+  background: #e4572e;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(1) > div:nth-child(1) {
+  background: #08a4bd;
+}
+
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+.MuiAvatar-root {
+  justify-content: center;
+  align-items: center;
+  margin-left: 430px;
+  margin-top: 10px;
+  border-top-width: 0px;
+  top: 10px;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+h1.MuiTypography-root {
+  margin-top: 20px;
+}
+
+
