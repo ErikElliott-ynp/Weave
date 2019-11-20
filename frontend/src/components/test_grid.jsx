@@ -1,6 +1,7 @@
 import React from 'react';
 import GridLayout from 'react-grid-layout';
 import Paper from '@material-ui/core/Paper';
+import YoutubeContainer from './youtube/youtube_container';
 
 
 class MyFirstGrid extends React.Component {
@@ -14,31 +15,43 @@ class MyFirstGrid extends React.Component {
             { i: 'e', x: 10, y: 0, w: 3, h: 9 },
         ];
         return (
-          <GridLayout
+            <GridLayout 
             className="layout"
             layout={layout}
-            cols={12}
-            width={950}
-            rowHeight={30}
-          >
+            autoSize={false} 
+            verticalCompact={false} 
+            cols={12} 
+            rowHeight={30} 
+            width={1125}>
+                
             <div key="a">
-              <Paper className=""></Paper>
+              <Paper className="youtube-container">
+                <YoutubeContainer />
+              </Paper>
             </div>
 
             <div key="b">
-              <Paper className=""></Paper>
+              <Paper className="youtube-container">
+                    <YoutubeContainer />
+              </Paper>
             </div>
 
             <div key="c">
-              <Paper className=""></Paper>
+              <Paper className={["youtube-container", "two"].join(' ')}>
+
+              </Paper>
             </div>
 
             <div key="d">
-              <Paper className=""></Paper>
+              <Paper className="">
+
+              </Paper>
             </div>
 
             <div key="e">
-              <Paper className=""></Paper>
+              <Paper className="">
+                  
+              </Paper>
             </div>
           </GridLayout>
         );

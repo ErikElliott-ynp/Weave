@@ -6,6 +6,7 @@ import MenuButton from './menu_button'
 
 class Dashboard extends React.Component {
     render() {
+        debugger;
         return (
 
           <div>

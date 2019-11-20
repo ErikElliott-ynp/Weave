@@ -4,9 +4,15 @@ import YoutubeListItem from "./youtube_list_item"
 class YoutubeList extends React.Component {
     constructor(props) {
         super(props)
+
+        this.testClick = this.testClick.bind(this);
     }
 
     componentDidMount() {
+        this.props.fetchVideos();
+    }
+
+    testClick() {
         this.props.fetchVideos();
     }
 
@@ -24,6 +30,7 @@ class YoutubeList extends React.Component {
         return (
             <div className="youtube-cont">
                 {list}
+                <div className="button" onClick={this.testClick} > CLICK ME TO FETCH</div>
             </div>
         )
     }
