@@ -4,7 +4,7 @@ import YoutubeList from "./youtube_list";
 
 const mSTP = (state) => {
     return {
-        videos: state.entitites.youtubeVideos,
+        videos: state.entities.youtubeVideos,
         errors: state.errors.youtube
     }
 }

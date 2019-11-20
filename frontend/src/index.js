@@ -8,7 +8,8 @@ import { logout, signup, login } from "./actions/session_actions";
 import './styles/app.scss';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
-import { youtubeMostPopular, fetchYoutubeVideo } from "./util/youtube_api_util"
+import { youtubeMostPopular, fetchYoutubeVideo } from "./util/youtube_api_util";
+import axios from "axios"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
 
     window.youtubeMostPopular = youtubeMostPopular;
-    window.fetchYoutubeVideo = fetchYoutubeVideo;
+    window.fetchYoutubeVideo = fetchYoutubeVideo
+    window.axios = axios;
 
     const root = document.getElementById('root');
 

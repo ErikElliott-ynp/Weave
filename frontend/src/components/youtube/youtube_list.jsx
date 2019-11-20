@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import YoutubeListItem from "./youtube_list_item"
 
-function YoutubeList(props) {
-    useEffect(() => {
-        props.fetchVideos(), []
-    })
+class YoutubeList extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-    let list = <ul className="youtube-list">
-        {props.videos.map(vid => {
-            return <YoutubeListItem 
+    componentDidMount() {
+        this.props.fetchVideos();
+    }
+
+
+    render () {
+        let list = <ul className="youtube-list">
+            {this.props.videos.map(vid => {
+                return <YoutubeListItem
                     vid={vid}
-                    fetchSingleVideo={props.fetchSingleVideo}
-                    />
-        })}
+                    fetchSingleVideo={this.props.fetchSingleVideo}
+                />
+            })}
         </ul>
-    return (
-        <div className="youtube-cont">
-            {list}
-        </div>
-    )
-} 
+        return (
+            <div className="youtube-cont">
+                {list}
+            </div>
+        )
+    }
+}
 
 export default YoutubeList;
