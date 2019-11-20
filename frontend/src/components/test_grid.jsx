@@ -37,7 +37,7 @@ class MyFirstGrid extends React.Component {
             </div>
 
             <div key="c">
-              <Paper className="">
+              <Paper className={["youtube-container", "two"].join(' ')}>
 
               </Paper>
             </div>
