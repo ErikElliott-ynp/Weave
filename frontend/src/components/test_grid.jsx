@@ -22,23 +22,33 @@ class MyFirstGrid extends React.Component {
             rowHeight={30}
           >
             <div key="a">
-              <Paper className=""></Paper>
+              <Paper className="">
+
+              </Paper>
             </div>
 
             <div key="b">
-              <Paper className=""></Paper>
+              <Paper className="">
+
+              </Paper>
             </div>
 
             <div key="c">
-              <Paper className=""></Paper>
+              <Paper className="">
+
+              </Paper>
             </div>
 
             <div key="d">
-              <Paper className=""></Paper>
+              <Paper className="">
+
+              </Paper>
             </div>
 
             <div key="e">
-              <Paper className=""></Paper>
+              <Paper className="">
+                  
+              </Paper>
             </div>
           </GridLayout>
         );

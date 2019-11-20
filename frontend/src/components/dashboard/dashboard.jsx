@@ -1,10 +1,12 @@
 import React from 'react';
-import YoutubeContainer from "../youtube/youtube_container";
+// import YoutubeContainer from "../youtube/youtube_container";
+import Grid from '../test_grid';
 
 class Dashboard extends React.Component {
     render() {
         return (
-        <YoutubeContainer />
+        // <YoutubeContainer />
+            <Grid />
         )
     }
 }
