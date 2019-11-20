@@ -1,0 +1,59 @@
+.html {
+    background-color: rgb(39, 39, 39);
+}
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    // background-color: rgb(39, 39, 39);
+}
+
+.dashboard .sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 90px;
+    background-color: beige;
+}
+
+.dashboard .main {
+    // background-color: rgb(39, 39, 39);
+    height: 100%;
+    width: 81%;
+    margin-left: 90px;
+    display: flex;
+}
+
+.layout .a {
+    overflow-y:auto;
+    background-color: orange;
+}
+
+
+.playground {
+    width: 75%;
+    height: 80%;
+    position: absolute;
+    left: 125px;
+    top: 100px;
+    // background-color: pink;
+}
+
+.searchbar {
+    border: 2px solid black;
+    height: 50px;
+    width: 1100px;
+    position: absolute;
+    left: 135px;
+    top: 24px;
+}
+
+.react-grid-layout.layout {
+    background-color: pink;
+}
+
+.inner-box {
+    height: 1000px;
+}
+
+
+

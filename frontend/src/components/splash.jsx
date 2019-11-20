@@ -55,6 +55,7 @@ class Splash extends React.Component {
 
                     <div className='banner'>
                         {/* Replace with png*/}
+
                     </div>
                 </div>
 
