@@ -3,6 +3,7 @@ import MyfirstGrid from '../test_grid';
 
 class Dashboard extends React.Component {
     render() {
+        debugger;
         return (
             <div className='dashboard'>
                 <div className='sidebar'>
