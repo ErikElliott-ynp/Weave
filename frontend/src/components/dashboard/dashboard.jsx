@@ -11,7 +11,7 @@ class Dashboard extends React.Component {
           <div>
 
             <div>
-                <PermDrawer className="" />
+                <PermDrawer />
             </div>
 
             <div>
