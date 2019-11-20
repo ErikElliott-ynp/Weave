@@ -60,4 +60,58 @@
 }
 
 
+/* Inline #1 | http://localhost:3000/#/dashboard */
+
+.playground {
+  /* width: 75%; */
+  /* height: 80%; */
+  /* left: 125px; */
+  width: 91%;
+  left: 162px;
+}
+
+/* Element | http://localhost:3000/#/dashboard */
+
+// .MuiInputBase-root {
+//   position: absolute;
+//   top: -117px;
+//   left: 110px;
+// }
+
+
+/* Element | http://localhost:3000/#/dashboard */
+
+
+/* Element | http://localhost:3000/#/dashboard */
+
+div.react-grid-item:nth-child(4) > div:nth-child(1) {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* Inline #1 | http://localhost:3000/#/dashboard */
+
+.MuiPaper-root {
+padding-left: 0px;
+padding-right: 0px;
+}
+
+
+/* Element | http://localhost:3000/#/ */
+
+.lilHomieForm > div:nth-child(1) > div:nth-child(1) {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Element | http://localhost:3000/#/dashboard */
+
+#root > div:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
 

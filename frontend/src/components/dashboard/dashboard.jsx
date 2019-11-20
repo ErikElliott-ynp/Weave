@@ -1,21 +1,28 @@
 import React from 'react';
-import MyfirstGrid from '../test_grid';
+import MainGrid from '../main_grid';
+import DashSearch from './search_bar'
+import PermDrawer from './Perm_drawer'
 
 class Dashboard extends React.Component {
     render() {
-        return(
-            <div className='dashboard'>
-                <div className='sidebar'>
+        return (
 
-                </div>
-                <div className='main'>
-                    <input className='searchbar' type="text"/>
-                    <div className='playground'>
-                      <MyfirstGrid />
-                    </div>
-                </div>
+          <div>
+
+            <div>
+                <PermDrawer className="" />
             </div>
-        )
+
+            <div>
+                <DashSearch />
+            </div>
+
+            <div className="playground">
+                <MainGrid />
+            </div>
+
+          </div>
+        );
     }
 }
 
