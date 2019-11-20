@@ -9,7 +9,7 @@ class Dashboard extends React.Component {
 
                 </div>
                 <div className='main'>
-                    <div className='searchbar'>Search Bar here</div>
+                    <input className='searchbar' type="text"/>
                     <div className='playground'>
                       <MyfirstGrid />
                     </div>
