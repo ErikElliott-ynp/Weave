@@ -106,7 +106,7 @@
 .MuiAvatar-root {
   border-left-width: 0px;
   border-left-style: solid;
-  margin-left: 369px;
+//   margin-left: 369px;
   border-top-width: 0px;
   border-top-style: solid;
   margin-top: 10px;
@@ -121,4 +121,27 @@ h1.MuiTypography-root {
 
 .logo {
     z-index: 1;
+}
+
+.flexMeDaddy {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+}
+
+.bigDaddyFlex {
+    display: flex;
+}
+
+.lilHomieForm {
+    display: flex;
+}
+
+.lilHomieForm > div:nth-child(1) {
+height: 100vh;
+padding-right: 10px;
+border-right-width: 0px;
+border-right-style: solid;
+margin-right: 0px;
+padding-left: 10px;
 }

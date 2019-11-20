@@ -13,6 +13,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
+import MyFirstGrid from '../test_grid';
+
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -29,13 +32,6 @@ function Copyright() {
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100vh',
-  },
-  image: {
-    backgroundImage: 'url(https://source.unsplash.com/random)',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor: theme.palette.grey[50],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
   },
   paper: {
     margin: theme.spacing(8, 4),
@@ -91,10 +87,9 @@ class SignInSide extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Grid container component="main" className={classes.root}>
+<div>
         <CssBaseline />
-        <Grid item xs={false} sm={4} md={7} className={classes.image} />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+
           <div className={classes.paper}>
             <Avatar className={classes.avatar}>
               <LockOutlinedIcon />
@@ -152,22 +147,21 @@ class SignInSide extends React.Component {
               >
                 {this.formTypeText()}
               </Button>
-              <Grid container>
-                <Grid item xs>
-                </Grid>
-                <Grid item>
+
+
+
+
                   <Link onClick={this.formSwitch} href="#" variant="body2">
                     {this.formSwitchButtonText()}
                   </Link>
-                </Grid>
-              </Grid>
+
+
               <Box mt={5}>
                 <Copyright />
               </Box>
             </form>
           </div>
-        </Grid>
-      </Grid>
+      </div>
     );
   }
 }

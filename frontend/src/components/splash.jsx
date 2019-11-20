@@ -36,11 +36,15 @@ class Splash extends React.Component {
     render() {
 
         return (
-            <div>
-                {this.form()}
-                {/* <div className='banner'>
+            <div className="bigDaddyFlex">
+
+                <div className="lilHomieForm">
+                    {this.form()}
+                </div>
+
+                <div className='flexMeDaddy'>
                     <MyFirstGrid />
-                </div> */}
+                </div>
 
 
                 {/* 
