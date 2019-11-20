@@ -11,10 +11,11 @@ class YoutubeList extends React.Component {
     }
 
 
-    render () {
+    render() {
         let list = <ul className="youtube-list">
             {this.props.videos.map(vid => {
                 return <YoutubeListItem
+                    key={vid.id}
                     vid={vid}
                     fetchSingleVideo={this.props.fetchSingleVideo}
                 />

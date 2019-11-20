@@ -7,7 +7,7 @@ export const RECEIVE_YOUTUBE_ERRORS = "RECEIVE_YOUTUBE_ERRORS";
 export const receiveVideos = videos => {
     return {
         type: RECEIVE_VIDEOS,
-        videos
+        videos: videos.data.videos
     }
 }
 
@@ -26,7 +26,7 @@ export const receiveYoutubeErrors = errors => {
 }
 
 export const fetchYoutubeMostPopular = () => dispatch => {
-    return YoutubeAPIUtil.youtubeMostPopular()
+    return YoutubeAPIUtil.backendFetch()
         .then( videos => dispatch(receiveVideos(videos)),
         errors => dispatch(receiveYoutubeErrors(errors))
         )

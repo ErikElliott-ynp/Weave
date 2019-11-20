@@ -5,8 +5,7 @@ const youtubeVideosReducer = (state = [], action) => {
     let nextState = Object.assign([], state)
     switch (action.type) {
         case RECEIVE_VIDEOS:
-            nextState.concat(action.videos.items)
-            return nextState;
+            return nextState.concat(action.videos);
         case RECEIVE_VIDEO:
             nextState.push(action.video.item[0])
         default:

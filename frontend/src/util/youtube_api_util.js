@@ -8,3 +8,9 @@ export const youtubeMostPopular = () => {
 export const fetchYoutubeVideo = id => {
     return axios.get(`https://www.googleapis.com/youtube/v3/videos?key=${key}&part=player&id=${id}&withCredentials=true`)
 }
+
+
+export const backendFetch = () => {
+    return axios.get('/api/youtube/youtubeMostPopular')
+}
+
