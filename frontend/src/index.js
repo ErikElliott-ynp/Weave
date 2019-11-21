@@ -9,7 +9,7 @@ import './styles/app.scss';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import axios from 'axios'
-import { fetchTopPosts } from './actions/reddit_actions'
+import { fetchTopPosts } from './actions/imgur_actions'
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.signup = signup;
     window.login = login;
     window.logout = logout;
-    window.fetchTopPosts = fetchTopPosts;
+    // window.fetchTopPosts = fetchTopPosts;
     
 
     const root = document.getElementById('root');

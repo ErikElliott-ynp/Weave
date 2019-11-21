@@ -1,4 +1,4 @@
 import axios from "axios";
 
-export const fetchRedditTopPosts = () =>
+export const fetchImgurTopPosts = () =>
        { return axios.get("https://api.imgur.com/3/gallery/hot/viral/0.json");};
