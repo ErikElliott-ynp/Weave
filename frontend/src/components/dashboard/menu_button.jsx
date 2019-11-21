@@ -15,29 +15,41 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const options = [
-  "placeholder",
-  "placeholder",
-  "placeholder",
-  "placeholder"
+  "Main Feed",
+  "Off"
 ];
 
-export default function MenuButton() {
+export default function MenuButton(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   const handleClickListItem = event => {
     setAnchorEl(event.currentTarget);
+    
   };
 
   const handleMenuItemClick = (event, index) => {
+    youtubeHandler(event);
     setSelectedIndex(index);
     setAnchorEl(null);
   };
 
+  const youtubeHandler = (event) => {
+    const target = event.currentTarget;
+    if ( target.id === "YouTube" && target.innerText === "Main Feed") {
+      document.querySelector(".youtube-box").style.visibility = "visible";
+      this.props.fetchVideos();
+    } else if (target.id === "YouTube" && target.innerText === "Off") {
+      document.querySelector(".youtube-box").style.visibility = "hidden";
+    }
+  }
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const listName = props.children.key;
 
   return (
     <div className={classes.root}>
@@ -49,7 +61,7 @@ export default function MenuButton() {
           aria-label="placeholder"
           onClick={handleClickListItem}
         >
-          <ListItemText primary="placeholder" secondary={options[selectedIndex]} />
+          <ListItemText primary={listName} secondary={options[selectedIndex]} />
         </ListItem>
       </List>
       <Menu
@@ -61,6 +73,7 @@ export default function MenuButton() {
       >
         {options.map((option, index) => (
           <MenuItem
+            id={listName}
             key={option}
             selected={index === selectedIndex}
             onClick={event => handleMenuItemClick(event, index)}

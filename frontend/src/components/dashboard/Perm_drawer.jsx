@@ -52,7 +52,7 @@ export default function PermDrawer() {
         <List>
           {["YouTube", "Imgr", "Spotify"].map((text, index) => (
             <MenuButton>
-              <ListItem button key={text}>
+              <ListItem button key={text} primary={text} >
                 <ListItemText primary={text} />
               </ListItem>
             </MenuButton>
