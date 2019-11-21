@@ -2,7 +2,7 @@ import React from 'react';
 import LoginFormContainer from './forms/login_form_container';
 import SignupFormContainer from './forms/signup_form_container';
 import Particles from 'react-particles-js';
-import MainGrid from './main_grid';
+import SplashGrid from './splash_grid';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -44,7 +44,7 @@ class Splash extends React.Component {
             </div>
 
             <div className="flexMeDaddy">
-              <MainGrid />
+              <SplashGrid />
             </div>
 
 
