@@ -5,6 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import * as mediaUtil from '../../util/media_util';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,20 +31,24 @@ export default function MenuButton(props) {
   };
 
   const handleMenuItemClick = (event, index) => {
-    youtubeHandler(event);
+    buttonHandler(event);
     setSelectedIndex(index);
     setAnchorEl(null);
   };
 
-  const youtubeHandler = (event) => {
+
+  //I plan to separate each social media switch to another file and importing them into this function - Alex
+  const buttonHandler = (event) => {
     const target = event.currentTarget;
-    if ( target.id === "YouTube" && target.innerText === "Main Feed") {
-      document.querySelector(".youtube-box").style.visibility = "visible";
-      props.fetchVideos();
-    } else if (target.id === "YouTube" && target.innerText === "Off") {
-      document.querySelector(".youtube-box").style.visibility = "hidden";
-      props.clearVideos();
-    }
+    //Handles Youtube
+    mediaUtil.handleMedia("YouTube", event, props);
+
+    //Handles Imgr
+    mediaUtil.handleMedia("Imgr", event, props);
+
+    //Handles Spotify
+    mediaUtil.handleMedia("Spotify", event, props);
+
   }
 
   const handleClose = () => {
