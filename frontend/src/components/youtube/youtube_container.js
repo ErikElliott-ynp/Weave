@@ -9,11 +9,11 @@ const mSTP = (state) => {
     }
 }
 
-const mDTP = dispatch => {
-    return {
-        fetchVideos: () => dispatch(fetchYoutubeMostPopular()),
-        fetchSingleVideo: id => dispatch(fetchYoutubeVideo(id))
-    }
-}
+// const mDTP = dispatch => {
+//     return {
+//         fetchVideos: () => dispatch(fetchYoutubeMostPopular()),
+//         fetchSingleVideo: id => dispatch(fetchYoutubeVideo(id))
+//     }
+// }
 
-export default connect(mSTP, mDTP)(YoutubeList);
+export default connect(mSTP)(YoutubeList);

@@ -2,6 +2,7 @@ import React from 'react';
 import GridLayout from 'react-grid-layout';
 import Paper from '@material-ui/core/Paper';
 import { defaultCipherList } from 'constants';
+import YoutubeList from './youtube/youtube_container';
 
 class MainGrid extends React.Component {
     render() {
@@ -22,23 +23,25 @@ class MainGrid extends React.Component {
             rowHeight={30}
             width={1125}
           >
-            <div key="a">
+            <div className='youtube-box' key="a">
+              <Paper className="">
+                <YoutubeList />
+              </Paper>
+            </div>
+
+            <div className='imgur-box' key="b">
               <Paper className=""></Paper>
             </div>
 
-            <div key="b">
+            <div className='spotify-box' key="c">
               <Paper className=""></Paper>
             </div>
 
-            <div key="c">
+            <div className='placeholder-box' key="d">
               <Paper className=""></Paper>
             </div>
 
-            <div key="d">
-              <Paper className=""></Paper>
-            </div>
-
-            <div key="e">
+            <div className='placeholder-box' key="e">
               <Paper className=""></Paper>
             </div>
             
