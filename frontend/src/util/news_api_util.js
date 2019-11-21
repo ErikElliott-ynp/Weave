@@ -7,7 +7,7 @@ export const newsUSMostPopular = () => {
 
 export const newsSearchTopic = topic => {
     let url = `https://newsapi.org/v2/everything?` +
-                `q=${topic}&` + `sortBy=popularity&`
+                `q=${topic}&sortBy=popularity&`
                 + `apiKey=${key}`;
 
     return axios.get(`${url}`);

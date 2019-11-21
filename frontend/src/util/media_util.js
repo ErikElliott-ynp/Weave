@@ -9,13 +9,14 @@ export const handleYoutube = (event, props) => {
     } 
 };
 
-export const handleImgr = (event, props) => {
+export const handleNews = (event, props) => {
     const target = event.currentTarget;
-    if (target.id === "Imgr" && target.innerText === "Main Feed") {
-        document.querySelector(".Imgr-box").style.visibility = "visible"
-    } else if (target.id === "Imgr" && target.innerText === "Off") {
-        document.querySelector(".Imgr-box").style.visibility = "hidden";
-        
+    if (target.id === "Google News" && target.innerText === "Main Feed") {
+        document.querySelector(".GoogleNews-box").style.visibility = "visible"
+        props.fetchNewsMostPopular();
+    } else if (target.id === "Google News" && target.innerText === "Off") {
+        document.querySelector(".GoogleNews-box").style.visibility = "hidden";
+        props.clearNews();
     } 
 };
 
