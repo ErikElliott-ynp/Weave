@@ -1,6 +1,6 @@
 import { RECEIVE_VIDEOS, RECEIVE_VIDEO } from "../actions/youtube_actions";
 
-const youtubeVideosReducer = (state = [], action) => {
+const YoutubeVideosReducer = (state = [], action) => {
     Object.freeze(state);
     let nextState = Object.assign([], state)
     switch (action.type) {
@@ -14,4 +14,4 @@ const youtubeVideosReducer = (state = [], action) => {
     }
 }
 
-export default youtubeVideosReducer
+export default YoutubeVideosReducer

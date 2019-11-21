@@ -4,21 +4,21 @@ export const RECEIVE_VIDEOS = "RECEIVE_VIDEOS";
 export const RECEIVE_VIDEO = "RECEIVE_VIDEO";
 export const RECEIVE_YOUTUBE_ERRORS = "RECEIVE_YOUTUBE_ERRORS";
 
-export const receiveVideos = videos => {
+const receiveVideos = videos => {
     return {
         type: RECEIVE_VIDEOS,
         videos: videos.data.videos
     }
 }
 
-export const receiveVideo = video => {
+const receiveVideo = video => {
     return {
         type: RECEIVE_VIDEO,
         video
     }
 }
 
-export const receiveYoutubeErrors = errors => {
+const receiveYoutubeErrors = errors => {
     return {
         type: RECEIVE_YOUTUBE_ERRORS,
         errors
