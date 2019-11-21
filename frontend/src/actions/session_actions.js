@@ -19,12 +19,16 @@ export const logoutUser = () => {
     }
 }
 
-export const receiverErrors = errors => {
+export const receiveErrors = errors => {
     return {
         type: RECEIVE_SESSIONS_ERRORS,
         errors
     }
 }
+
+export const clearErrors = () => dispatch => (
+    dispatch(receiveErrors([]))
+);
 
 export const signup = user => dispatch => {
     return APIUtil.signup(user)
@@ -35,7 +39,7 @@ export const signup = user => dispatch => {
             const decoded = jwt_decode(token);
             dispatch(receiveCurrentUser(decoded))
         }
-        , err => dispatch(receiverErrors(Object.values(err.response.data)))
+        , err => dispatch(receiveErrors(Object.values(err.response.data)))
         )
 };
 
@@ -48,7 +52,7 @@ export const login = user => dispatch => {
             const decoded = jwt_decode(token);
             dispatch(receiveCurrentUser(decoded))
         },
-        err => dispatch(receiverErrors(Object.values(err.response.data)))
+        err => dispatch(receiveErrors(Object.values(err.response.data)))
         )
 }
 
