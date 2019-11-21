@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
-import youtubeVideosReducer from "./youtube_videos_reducer";
+import YoutubeVideosReducer from "./youtube_videos_reducer";
+import NewsReducer from "./news_reducer";
 
 const EntitiesReducer = combineReducers({
-    youtubeVideos: youtubeVideosReducer
+    youtubeVideos: YoutubeVideosReducer,
+    news: NewsReducer
 })
 
 export default EntitiesReducer;
