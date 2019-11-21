@@ -1,0 +1,20 @@
+.vid-list-item {
+    width: min-content;
+    font-size: 14px;
+}
+
+.vid-list-item:hover {
+    cursor: pointer;
+}
+
+.youtube-show-close {
+    cursor: pointer;
+}
+
+.playground .youtube-container {
+    overflow-y: auto;
+}
+
+.youtube-cont .button:hover {
+    cursor: pointer;
+}

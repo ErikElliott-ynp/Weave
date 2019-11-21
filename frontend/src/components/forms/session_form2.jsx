@@ -13,9 +13,6 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
-import MyFirstGrid from '../test_grid';
-
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -56,31 +53,95 @@ class SignInSide extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      signupForm: false
-    }
-
-    this.formSwitch = this.formSwitch.bind(this);
+      email: '',
+      password: '',
+      password2: ''
+    };
+    
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
-  formSwitch() {
-    this.setState({ signupForm: !this.state.signupForm })
+  // Once the user has been authenticated, redirect to the Tweets page
+  componentWillReceiveProps(nextProps) {
+    // if (nextProps.signedIn === true) {
+    //   this.props.history.push('/dashboard');
+    // }
+
+    // Set or clear errors
+    this.setState({ errors: nextProps.errors })
   }
 
-  formSwitchButtonText() {
-    if (!this.state.signupForm) {
-      return 'Sign up Instead.'
+  // Handle field updates (called in the render method)
+  update(field) {
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }
+
+  // Handle form submission
+  handleSubmit(e) {
+    e.preventDefault();
+
+    let user = {
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
+    };
+
+    this.props.process(user);
+  }
+
+  // Render the session errors if there are any
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  signUpPassword2() {
+    if (this.props.formName === 'Sign Up') {
+      return (
+        <TextField
+          variant="outlined"
+          margin="normal"
+          required
+          fullWidth
+          name="password"
+          label="Confirm Password"
+          type="password"
+          id="password"
+          autoComplete="current-password"
+          value={this.state.password2}
+          onChange={this.update('password2')}
+        />
+      )
     } else {
-      return 'Login?'
+      return null;
     }
   }
 
-  formTypeText() {
-    if (!this.state.signupForm) {
-      return 'Login'
-    } else {
-      return 'Sign up'
-    }
-  }
+  // formSwitchButtonText() {
+  //   if (!this.state.signupForm) {
+  //     return 'Sign up Instead.'
+  //   } else {
+  //     return 'Login?'
+  //   }
+  // }
+
+  // formTypeText() {
+  //   if (!this.state.signupForm) {
+  //     return 'Login'
+  //   } else {
+  //     return 'Sign up'
+  //   }
+  // }
 
 
   render() {
@@ -97,10 +158,13 @@ class SignInSide extends React.Component {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              {this.formTypeText()}
+              {this.props.formName}
             </Typography>
 
-            <form className={classes.form} noValidate>
+            <form 
+            onSubmit={this.handleSubmit}
+            className={classes.form} 
+            noValidate>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -111,6 +175,8 @@ class SignInSide extends React.Component {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                value={this.state.email}
+                onChange={this.update('email')}
               />
               <TextField
                 variant="outlined"
@@ -122,9 +188,12 @@ class SignInSide extends React.Component {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                value={this.state.password}
+                onChange={this.update('password')}
               />
 
-              <TextField
+              {this.signUpPassword2()}
+              {/* <TextField
                 variant="outlined"
                 margin="normal"
                 required
@@ -134,8 +203,10 @@ class SignInSide extends React.Component {
                 type="password"
                 id="password"
                 autoComplete="current-password"
-              />
+                value={this.state.password2}
+              /> */}
 
+              {this.renderErrors()}
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
@@ -148,16 +219,8 @@ class SignInSide extends React.Component {
                 color="primary"
                 className={classes.submit}
               >
-                {this.formTypeText()}
+                {this.props.formName}
               </Button>
-
-
-
-
-                  <Link onClick={this.formSwitch} href="#" variant="body2">
-                    {this.formSwitchButtonText()}
-                  </Link>
-
 
               <Box mt={5}>
                 <Copyright />

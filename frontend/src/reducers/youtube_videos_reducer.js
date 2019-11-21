@@ -1,4 +1,4 @@
-import { RECEIVE_VIDEOS, RECEIVE_VIDEO } from "../actions/youtube_actions";
+import { RECEIVE_VIDEOS, RECEIVE_VIDEO, CLEAR_VIDEOS } from "../actions/youtube_actions";
 
 const YoutubeVideosReducer = (state = [], action) => {
     Object.freeze(state);
@@ -9,6 +9,8 @@ const YoutubeVideosReducer = (state = [], action) => {
         case RECEIVE_VIDEO:
             nextState.push(action.video.item[0])
             return nextState;
+        case CLEAR_VIDEOS:
+            return [];
         default:
             return state;
     }
