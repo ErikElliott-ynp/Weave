@@ -11,14 +11,14 @@ class MainGrid extends React.Component {
           { i: "b", x: 0, y: 0, w: 3, h: 8, minW: 2, maxW: 6 },
           { i: "c", x: 4, y: 0, w: 5, h: 5 },
           { i: "d", x: 3, y: 0, w: 1, h: 9 },
-          { i: "e", x: 10, y: 0, w: 3, h: 9 }
+          { i: "e", x: 10, y: 0, w: 3, h: 9 },
         ];
         return (
           <GridLayout
             className="layout"
             layout={layout}
             cols={12}
-            width={950}
+            width={1000}
             rowHeight={30}
           >
             <div key="a">
@@ -40,6 +40,7 @@ class MainGrid extends React.Component {
             <div key="e">
               <Paper className=""></Paper>
             </div>
+
           </GridLayout>
         );
     }
