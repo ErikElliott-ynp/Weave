@@ -25,14 +25,14 @@ const receiveNewsErrors = errors => {
 }
 
 export const fetchNewsMostPopular = () => dispatch => {
-    return NewsAPIUtil.newsUSMostPopular
+    return NewsAPIUtil.newsUSMostPopular()
         .then( articles => dispatch(receiveNewsArticles(articles)),
         errors => dispatch(receiveNewsErrors(errors))
         )
 }
 
 export const fetchNewsBySearchTopic = topic => dispatch => {
-    return NewsAPIUtil.newsSearchTopic(topid)
+    return NewsAPIUtil.newsSearchTopic(topic)
         .then( articles => dispatch(receiveNewsArticles(articles)),
         errors => dispatch(receiveNewsErrors(errors))
         )
