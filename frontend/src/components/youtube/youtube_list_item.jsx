@@ -17,7 +17,6 @@ class YoutubeListItem extends React.Component {
     }
     
     render() {
-        debugger; 
         let title = this.props.vid.snippet.title;
         let thumbnail = <img src={this.props.vid.snippet.thumbnails.default.url} alt="thumbnail" className="vid-thumb"/>
         let id = this.props.vid.id

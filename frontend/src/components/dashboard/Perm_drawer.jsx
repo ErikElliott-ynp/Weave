@@ -5,7 +5,7 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import MenuButton from "./menu_button";
+import MenuButton from "./menu_button_container";
 
 
 
@@ -52,7 +52,7 @@ export default function PermDrawer() {
         <List>
           {["YouTube", "Imgr", "Spotify"].map((text, index) => (
             <MenuButton>
-              <ListItem button key={text}>
+              <ListItem button key={text} primary={text} >
                 <ListItemText primary={text} />
               </ListItem>
             </MenuButton>

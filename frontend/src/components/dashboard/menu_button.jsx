@@ -5,6 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import * as mediaUtil from '../../util/media_util';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -14,29 +15,46 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const options = [
-  "placeholder",
-  "placeholder",
-  "placeholder",
-  "placeholder"
+  "Main Feed",
+  "Off"
 ];
 
-export default function MenuButton() {
+export default function MenuButton(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   const handleClickListItem = event => {
     setAnchorEl(event.currentTarget);
+    
   };
 
   const handleMenuItemClick = (event, index) => {
+    buttonHandler(event);
     setSelectedIndex(index);
     setAnchorEl(null);
   };
 
+
+  //I plan to separate each social media switch to another file and importing them into this function - Alex
+  const buttonHandler = (event) => {
+    const target = event.currentTarget;
+    //Handles Youtube
+    mediaUtil.handleMedia("YouTube", event, props);
+
+    //Handles Imgr
+    mediaUtil.handleMedia("Imgr", event, props);
+
+    //Handles Spotify
+    mediaUtil.handleMedia("Spotify", event, props);
+
+  }
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const listName = props.children.key;
 
   return (
     <div className={classes.root}>
@@ -48,7 +66,7 @@ export default function MenuButton() {
           aria-label="placeholder"
           onClick={handleClickListItem}
         >
-          <ListItemText primary="placeholder" secondary={options[selectedIndex]} />
+          <ListItemText primary={listName} secondary={options[selectedIndex]} />
         </ListItem>
       </List>
       <Menu
@@ -60,6 +78,7 @@ export default function MenuButton() {
       >
         {options.map((option, index) => (
           <MenuItem
+            id={listName}
             key={option}
             selected={index === selectedIndex}
             onClick={event => handleMenuItemClick(event, index)}
