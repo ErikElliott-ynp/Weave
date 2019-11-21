@@ -42,6 +42,7 @@ export default function MenuButton(props) {
       props.fetchVideos();
     } else if (target.id === "YouTube" && target.innerText === "Off") {
       document.querySelector(".youtube-box").style.visibility = "hidden";
+      props.clearVideos();
     }
   }
 
