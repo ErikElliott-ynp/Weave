@@ -23,25 +23,25 @@ class MainGrid extends React.Component {
             rowHeight={30}
             width={1125}
           >
-            <div className='youtube-box' key="a">
+            <div className='YouTube-box' key="a">
               <Paper className="">
                 <YoutubeList />
               </Paper>
             </div>
 
-            <div className='imgur-box' key="b">
+            <div className='Imgr-box' key="b">
               <Paper className=""></Paper>
             </div>
 
-            <div className='spotify-box' key="c">
+            <div className='Spotify-box' key="c">
               <Paper className=""></Paper>
             </div>
 
-            <div className='placeholder-box' key="d">
+            <div className='Placeholder-box' key="d">
               <Paper className=""></Paper>
             </div>
 
-            <div className='placeholder-box' key="e">
+            <div className='Placeholder-box' key="e">
               <Paper className=""></Paper>
             </div>
             
