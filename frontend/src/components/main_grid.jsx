@@ -16,12 +16,11 @@ class MainGrid extends React.Component {
         ];
         return (
           <GridLayout
-            className="layout"
-            autoSize={false}
-            verticalCompact={false}
+            className=""
+            layout={layout}
             cols={12}
+            width={1750}
             rowHeight={30}
-            width={1125}
           >
             <div className='YouTube-box' key="a">
               <Paper className="">
@@ -44,7 +43,7 @@ class MainGrid extends React.Component {
             <div className='Placeholder-box' key="e">
               <Paper className=""></Paper>
             </div>
-            
+
           </GridLayout>
         );
     }
