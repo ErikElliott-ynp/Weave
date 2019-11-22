@@ -9,10 +9,6 @@ function NewsArticlesList(props) {
         props.fetchSearchNews(search)
     }
 
-    const handleChange = (e) => {
-        setSearch(e.currentTarget.value)
-    }
-
     let articlesList = props.articles.map( (article, i) => {
         return <NewsArticle 
                 article={article}
@@ -22,14 +18,16 @@ function NewsArticlesList(props) {
     
     return (
         <div className="news-cont">
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <input type="text" className="search-bar" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
-                <input type="submit" className="search-btn" value="Search"/>
-            </form>
+            <div className="search-cont">
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <input type="text" className="search-bar" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
+                    <input type="submit" className="search-btn" value="Search"/>
+                </form>
+            </div>
             <ul className="news-list">
                 {articlesList}
             </ul>
-
+            <p className="credit-tag">Powered by NewsAPI</p>
         </div>
     )
 }
