@@ -14,10 +14,16 @@ class Dashboard extends React.Component {
                 <div>
                     <PermDrawer className="" />
                 </div>
+            // <YoutubeContainer />
+            <NewsArticlesListContainer />
+            )
+            <div>
+                <PermDrawer />
+            </div>
 
-                <div>
-                    <DashSearch />
-                </div>
+            <div>
+                <DashSearch />
+            </div>
 
                 <div className="playground">
                     <MainGrid />
