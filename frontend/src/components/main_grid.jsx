@@ -16,10 +16,10 @@ class MainGrid extends React.Component {
         ];
         return (
           <GridLayout
-            className="layout"
+            className=""
             layout={layout}
             cols={12}
-            width={1000}
+            width={1750}
             rowHeight={30}
           >
             <div className='YouTube-box' key="a">

@@ -9,7 +9,7 @@ import * as mediaUtil from '../../util/media_util';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 360,
+    maxWidth: 300,
     backgroundColor: theme.palette.background.paper,
   },
 }));
