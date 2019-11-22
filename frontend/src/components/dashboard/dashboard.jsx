@@ -14,7 +14,6 @@ class Dashboard extends React.Component {
                 <div>
                     <PermDrawer className="" />
                 </div>
-
             // <YoutubeContainer />
             <NewsArticlesListContainer />
             )
@@ -29,8 +28,7 @@ class Dashboard extends React.Component {
                 <div className="playground">
                     <MainGrid />
                 </div>
-
-          </div>
+            </div>
         );
     }
 }

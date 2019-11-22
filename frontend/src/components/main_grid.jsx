@@ -3,7 +3,7 @@ import GridLayout from 'react-grid-layout';
 import Paper from '@material-ui/core/Paper';
 import { defaultCipherList } from 'constants';
 import YoutubeList from './youtube/youtube_container';
-import NewsList from "./news/news_articles_list_container"
+import NewsList from './news/news_articles_list_container';
 
 class MainGrid extends React.Component {
     render() {
@@ -29,7 +29,7 @@ class MainGrid extends React.Component {
               </Paper>
             </div>
 
-            <div className='Imgr-box' key="b">
+            <div className='GoogleNews-box' key="b">
               <Paper className="">
                 <NewsList />
               </Paper>
