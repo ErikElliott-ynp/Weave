@@ -12,4 +12,3 @@ export const fetchYoutubeVideo = id => {
 export const backendFetch = () => {
     return axios.get('/api/youtube/youtubeMostPopular')
 }
-

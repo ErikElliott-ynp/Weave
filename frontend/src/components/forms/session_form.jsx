@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
+
   // Once the user has been authenticated, redirect to the Tweets page
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
@@ -66,7 +67,7 @@ class SessionForm extends React.Component {
         <div>
           <input
             className='password2'
-            type='password'
+            type='password2'
             value={this.state.password2}
             onChange={this.update('password2')}
             placeholder='Password Confirmation'

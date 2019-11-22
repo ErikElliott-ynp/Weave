@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@material-ui/core/Link';
 import LoginFormContainer from './forms/login_form_container';
 import SignupFormContainer from './forms/signup_form_container';
 import Particles from 'react-particles-js';
@@ -15,7 +16,8 @@ class Splash extends React.Component {
     }
 
     formSwitch() {
-        this.setState({ signupForm: !this.state.signupForm })
+        this.setState({ signupForm: !this.state.signupForm });
+        this.props.clearErrors();
     }
 
     form() {
@@ -41,6 +43,9 @@ class Splash extends React.Component {
 
             <div className="lilHomieForm">
                 {this.form()}
+                <Link id="form-change" onClick={this.formSwitch} href="#" variant="body2">
+                    {this.formSwitchButtonText()}
+                </Link>
             </div>
 
             <div className="flexMeDaddy">

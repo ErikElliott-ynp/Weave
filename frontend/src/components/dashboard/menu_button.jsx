@@ -40,13 +40,13 @@ export default function MenuButton(props) {
   const buttonHandler = (event) => {
     const target = event.currentTarget;
     //Handles Youtube
-    mediaUtil.handleMedia("YouTube", event, props);
+    mediaUtil.handleYoutube(event, props);
 
     //Handles Imgr
-    mediaUtil.handleMedia("Imgr", event, props);
+    mediaUtil.handleImgr(event, props);
 
     //Handles Spotify
-    mediaUtil.handleMedia("Spotify", event, props);
+    mediaUtil.handleSpotify(event, props);
 
   }
 

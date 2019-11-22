@@ -5,14 +5,14 @@ export const RECEIVE_VIDEO = "RECEIVE_VIDEO";
 export const RECEIVE_YOUTUBE_ERRORS = "RECEIVE_YOUTUBE_ERRORS";
 export const CLEAR_VIDEOS = "CLEAR_VIDEOS";
 
-export const receiveVideos = videos => {
+const receiveVideos = videos => {
     return {
         type: RECEIVE_VIDEOS,
         videos: videos.data.videos
     }
 }
 
-export const receiveVideo = video => {
+const receiveVideo = video => {
     return {
         type: RECEIVE_VIDEO,
         video
@@ -25,7 +25,7 @@ export const clearVideos = () => {
     }
 }
 
-export const receiveYoutubeErrors = errors => {
+const receiveYoutubeErrors = errors => {
     return {
         type: RECEIVE_YOUTUBE_ERRORS,
         errors
@@ -42,4 +42,5 @@ export const fetchYoutubeMostPopular = () => dispatch => {
 export const fetchYoutubeVideo = id => dispatch => {
     return YoutubeAPIUtil.fetchYoutubeVideo(id) 
         .then( video => dispatch(receiveVideo(video)))
-}
+} 
+
