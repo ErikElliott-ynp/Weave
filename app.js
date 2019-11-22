@@ -45,6 +45,7 @@ app.get(
 );
 
 
+const youtube = require('./routes/api/youtube');
 
 mongoose
     .connect(db, { useNewUrlParser: true })
@@ -61,6 +62,7 @@ require('./config/passport')(passport);
 
 app.use('/api/users', users);
 
+app.use('/api/youtube', youtube);
 
 const port = process.env.PORT || 5000;
 

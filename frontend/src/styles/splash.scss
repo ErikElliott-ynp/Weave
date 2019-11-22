@@ -1,91 +1,232 @@
-.splash {
+// .splash {
+//     display: flex;
+//     justify-content: space-evenly;
+//     height: 100%;
+//     width: 100%;
+// }
+
+// .splash-left {
+//     height: 100%;
+//     width: 70%;
+// }
+
+// .splash-left .header {
+//     display: flex;
+//     align-items: center;
+// }
+
+// .splash-left .banner {
+//     // background-image: url(images/image-ginger-cat-page-under-construction.png);
+//     height: 389px;
+//     width: 583px;
+// }
+
+// .splash-right {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     height: 50%;
+//     margin-right: 80px;
+// }
+
+// // .demo-container {
+// //     height: 100%;
+// //     width: 100%;
+// //     display: flex;
+// //     justify-content: center;
+// //     align-items: center;
+// //     color: #424242;
+// //     background-color: #B0A1BA;
+// // }
+
+
+// // .splash-title {
+// //     color: #222222;
+// //     font-weight: 700;
+// //     font-size: 32px;
+// // }
+
+// // .form-container h1 {
+// //     color: #424242;
+// //     margin-bottom: 21px;
+// // }
+
+// // .input-container .email {
+// //     padding: 6px;
+// //     margin-bottom: 9px;
+// //     color: #424242;
+// // }
+
+// // .input-container .password {
+// //     padding: 6px;
+// //     color: #424242;
+// // }
+
+// // .input-container .login {
+// //     margin-top: 15px;
+// //     float: right;
+// //     color: #424238;
+// //     border: 2px solid #737373;
+// //     border-radius: 5%;
+// //     background-color: #B0A1BA;
+// //     font-size: 16px;
+// // }
+
+// // .form-switch {
+// //     color: #ae7cd2;
+// //     border: none;
+// //     background: none;
+// // }
+
+// // .splash-group-info {
+// //     color: #424242;
+// //     background-color: #B0A1BA;
+// //     height: 100px;
+// //     width: 100px;
+// //     border-radius: 50%;
+// //     display: flex;
+// //     align-items: center;
+// //     justify-content: center;
+// //     border: 2px solid #737373;
+// // }
+
+
+/* Element | http://localhost:3000/#/ */
+
+.MuiPaper-root {
+  height: 100vh;
+  border-left-width: 0px;
+  border-left-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Element | http://localhost:3000/#/ */
+
+.MuiAvatar-root {
+  border-left-width: 0px;
+  border-left-style: solid;
+//   margin-left: 369px;
+  border-top-width: 0px;
+  border-top-style: solid;
+  margin-top: 10px;
+}
+
+/* Element | http://localhost:3000/#/ */
+
+h1.MuiTypography-root {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+    z-index: 1;
+}
+
+.flexMeDaddy {
     display: flex;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
+    justify-content: flex-end;
+    align-content: flex-start;
+    background: transparent;
 }
 
-.splash-left {
-    height: 100%;
-    width: 70%;
-}
-
-.splash-left .header {
+.bigDaddyFlex {
     display: flex;
-    align-items: center;
+    background: transparent;
 }
-
 .splash-left .banner {
-    background-image: url(images/image-ginger-cat-page-under-construction.png);
+    // background-image: url(images/image-ginger-cat-page-under-construction.png);
     height: 389px;
     width: 583px;
 }
 
-.splash-right {
+.lilHomieForm {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 50%;
-    margin-right: 80px;
 }
 
-// .demo-container {
-//     height: 100%;
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     color: #424242;
-//     background-color: #B0A1BA;
-// }
+.lilHomieForm > div:nth-child(1) {
+height: 100vh;
+padding-right: 10px;
+border-right-width: 0px;
+border-right-style: solid;
+margin-right: 0px;
+padding-left: 10px;
+}
 
 
-// .splash-title {
-//     color: #222222;
-//     font-weight: 700;
-//     font-size: 32px;
-// }
+.MuiPaper-root {
+    width: 100%;
+    height: 100%;
+}
 
-// .form-container h1 {
-//     color: #424242;
-//     margin-bottom: 21px;
-// }
+.imgSquare {
+    max-width: 500px;
+    max-height: 500px;
+}
 
-// .input-container .email {
-//     padding: 6px;
-//     margin-bottom: 9px;
-//     color: #424242;
-// }
+.flashTheFlashy {
+    z-index: -99;
+}
 
-// .input-container .password {
-//     padding: 6px;
-//     color: #424242;
-// }
 
-// .input-container .login {
-//     margin-top: 15px;
-//     float: right;
-//     color: #424238;
-//     border: 2px solid #737373;
-//     border-radius: 5%;
-//     background-color: #B0A1BA;
-//     font-size: 16px;
-// }
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
 
-// .form-switch {
-//     color: #ae7cd2;
-//     border: none;
-//     background: none;
-// }
+.yeetThatTweet {
+  background: #e4572e;
+}
 
-// .splash-group-info {
-//     color: #424242;
-//     background-color: #B0A1BA;
-//     height: 100px;
-//     width: 100px;
-//     border-radius: 50%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     border: 2px solid #737373;
-// }
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(3) > div:nth-child(1) {
+  background: #f3a712;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+.finstaTheSpinsta {
+  background: #08a4bd;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(4) > div:nth-child(1) {
+  background: #657eeb;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(5) > div:nth-child(1) {
+  background: #29335c;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(2) > div:nth-child(1) {
+  background: #e4572e;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+div.react-grid-item:nth-child(1) > div:nth-child(1) {
+  background: #08a4bd;
+}
+
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+.MuiAvatar-root {
+  justify-content: center;
+  align-items: center;
+  margin-left: 430px;
+  margin-top: 10px;
+  border-top-width: 0px;
+  top: 10px;
+}
+
+/* Element | http://localhost:3000/?email=&password=&password=#/ */
+
+h1.MuiTypography-root {
+  margin-top: 20px;
+}
+
+

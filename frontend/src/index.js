@@ -12,6 +12,7 @@ import axios from 'axios'
 import { fetchTopPosts } from './actions/imgur_actions'
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
     let store;
 

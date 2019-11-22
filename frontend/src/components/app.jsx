@@ -1,16 +1,15 @@
 import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Dashboard from './dashboard/dashboard';
 
-import ImgurContainer from './imgur/imgur_container'
-import Splash from './splash';
+import SplashContainer from './splash_container';
 
 const App = () => (
-  <Switch>
-    <AuthRoute exact path="/" component={Splash} />
-    {/* <AuthRoute exact path="/" component={ImgurContainer} /> */}
-  </Switch>
+    <Switch>
+        <AuthRoute exact path="/" component={SplashContainer} />
+        <Route exact path="/dashboard" component={Dashboard} />
+    </Switch>
 );
 
 export default App;
