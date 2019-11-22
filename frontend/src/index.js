@@ -8,6 +8,8 @@ import { logout, signup, login } from "./actions/session_actions";
 import './styles/app.scss';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
+import axios from 'axios'
+import { fetchTopPosts } from './actions/imgur_actions'
 
 
 
@@ -33,10 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-
     window.signup = signup;
     window.login = login;
     window.logout = logout;
+    // window.fetchTopPosts = fetchTopPosts;
+    
 
     const root = document.getElementById('root');
 
