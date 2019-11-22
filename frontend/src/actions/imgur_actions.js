@@ -1,7 +1,7 @@
 import * as ImgurUtil from "../util/imgur_util"
 
 export const RECEIVE_ALL_IMGUR_POSTS = "RECEIVE_ALL_IMGUR_POSTS"
-export const CLEAR_IMGUR = "CLEAR_IMGR";
+export const CLEAR_IMGUR = "CLEAR_IMGUR";
 
 export const receiveAllImgurPosts = posts => ({
         type: RECEIVE_ALL_IMGUR_POSTS,
