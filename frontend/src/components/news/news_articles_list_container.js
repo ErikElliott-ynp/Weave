@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchNewsMostPopular, fetchNewsBySearchTopic} from "../../actions/news_actions";
+import { fetchNewsBySearchTopic} from "../../actions/news_actions";
 import NewsArticlesList from "./news_articles_list";
 
 const mSTP = state => {
@@ -10,7 +10,7 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return {
-        fetchMostPopularNews: () => dispatch(fetchNewsMostPopular()),
+        // fetchMostPopularNews: () => dispatch(fetchNewsMostPopular()),
         fetchSearchNews: topic => dispatch(fetchNewsBySearchTopic(topic))
     }
 }

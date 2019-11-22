@@ -11,7 +11,9 @@ class Dashboard extends React.Component {
         return (
             
             <div>
-
+                <div>
+                    <PermDrawer className="" />
+                </div>
             // <YoutubeContainer />
             <NewsArticlesListContainer />
             )
@@ -23,11 +25,10 @@ class Dashboard extends React.Component {
                 <DashSearch />
             </div>
 
-            <div className="playground">
-                <MainGrid />
+                <div className="playground">
+                    <MainGrid />
+                </div>
             </div>
-
-          </div>
         );
     }
 }

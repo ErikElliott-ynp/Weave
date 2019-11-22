@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchYoutubeMostPopular, fetchYoutubeVideo } from "../../actions/youtube_actions";
+// import { fetchYoutubeMostPopular, fetchYoutubeVideo } from "../../actions/youtube_actions";
 import YoutubeList from "./youtube_list";
 
 const mSTP = (state) => {

@@ -3,6 +3,7 @@ import * as NewsAPIUtil from "../util/news_api_util";
 export const RECEIVE_NEWS_ARTICLES = "RECEIVE_NEWS_ARTICLES";
 export const CLEAR_NEWS_ARTICLES  = "CLEAR_NEWS_ARTICLES";
 export const RECEIVE_NEWS_ERRORS = "RECEIVE_NEWS_ERRORS";
+export const CLEAR_NEWS = "CLEAR_NEWS";
 
 const receiveNewsArticles = articles => {
     return {
@@ -21,6 +22,12 @@ const receiveNewsErrors = errors => {
     return {
         type: RECEIVE_NEWS_ERRORS,
         errors
+    }
+}
+
+export const clearNews = () => {
+    return {
+        type: CLEAR_NEWS
     }
 }
 

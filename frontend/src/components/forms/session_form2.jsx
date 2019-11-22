@@ -62,6 +62,22 @@ class SignInSide extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
+  // componentDidMount() {
+  //   if (this.state.password.length < 1) {
+  //     document.getElementById("login-button").disabled = true;
+  //   }
+  // }
+
+  // componentDidUpdate() {
+  //   if (document.getElementById("login-button")) {
+  //     if (this.state.password.length < 1) {
+  //       document.getElementById("login-button").disabled = true;
+  //     } else {
+  //       document.getElementById("login-button").disabled = false;
+  //     }
+  //   }
+  // }
+
   // Once the user has been authenticated, redirect to the Tweets page
   componentWillReceiveProps(nextProps) {
     // if (nextProps.signedIn === true) {
@@ -212,7 +228,7 @@ class SignInSide extends React.Component {
                 label="Remember me"
               />
               <Button
-
+                id="login-button"
                 type="submit"
                 fullWidth
                 variant="contained"
