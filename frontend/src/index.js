@@ -10,6 +10,7 @@ import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import axios from 'axios'
 import { fetchTopPosts } from './actions/imgur_actions'
+import { models } from 'mongoose';
 
 
 
@@ -45,4 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ReactDOM.render(<Root store={store} />, root);
 
+})
+
+let mods = Array.from(document.getElementsByClassName('Muipopover-paper'));
+mods.forEach( mod => {
+    mod.classList.add('menu-options');
 })
