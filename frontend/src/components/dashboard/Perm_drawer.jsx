@@ -12,55 +12,55 @@ import MenuButton from "./menu_button_container";
 const drawerWidth = 140;
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex"
-  },
-  appBar: {
-    width: `calc(50% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0
-  },
-  drawerPaper: {
-    width: drawerWidth
-  },
-  toolbar: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3)
-  }
+    root: {
+        display: "flex"
+    },
+    appBar: {
+        width: `calc(50% - ${drawerWidth}px)`,
+        marginLeft: drawerWidth
+    },
+    drawer: {
+        width: drawerWidth,
+        flexShrink: 0
+    },
+    drawerPaper: {
+        width: drawerWidth
+    },
+    toolbar: theme.mixins.toolbar,
+    content: {
+        flexGrow: 1,
+        backgroundColor: theme.palette.background.default,
+        padding: theme.spacing(3)
+    }
 }));
 
 export default function PermDrawer() {
-  const classes = useStyles();
+    const classes = useStyles();
 
-  return (
-    <div className={classes.root}>
-      <Drawer
-        className={classes.drawer}
-        variant="permanent"
-        classes={{
-          paper: classes.drawerPaper
-        }}
-        anchor="left"
-      >
-        <Divider />
+    return (
+        <div className={classes.root}>
+            <Drawer
+                className={classes.drawer}
+                variant="permanent"
+                classes={{
+                    paper: classes.drawerPaper
+                }}
+                anchor="left"
+            >
+                <Divider />
 
-        <List>
-          {["YouTube", "Google News", "Imgur"].map((text, index) => (
-            <MenuButton key={index} >
-              <ListItem button key={text} primary={text} >
-                <ListItemText primary={text} />
-              </ListItem>
-            </MenuButton>
-          ))}
-        </List>
+                <List>
+                    {["YouTube", "Google News", "Imgur"].map((text, index) => (
+                        <MenuButton key={index} >
+                            <ListItem button key={text} primary={text} >
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </MenuButton>
+                    ))}
+                </List>
 
-        <Divider />
-      </Drawer>
-    </div>
-  );
+                <Divider />
+            </Drawer>
+        </div>
+    );
 }
