@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_IMGUR_POSTS } from "../actions/imgur_actions";
+import { RECEIVE_ALL_IMGUR_POSTS, CLEAR_IMGUR } from "../actions/imgur_actions";
 
 const redditReducer = (
   state = [],
@@ -8,7 +8,9 @@ const redditReducer = (
   let newState = Object.assign([], state);
   switch (action.type) {
       case RECEIVE_ALL_IMGUR_POSTS:
-          return newState.concat(action.posts.data.data)
+          return newState.concat(action.posts.data.data);
+      case CLEAR_IMGUR:
+          return [];
     default:
       return state;
   }

@@ -14,9 +14,6 @@ class Dashboard extends React.Component {
                 <div>
                     <PermDrawer className="" />
                 </div>
-            // <YoutubeContainer />
-            <NewsArticlesListContainer />
-            )
             <div>
                 <PermDrawer />
             </div>

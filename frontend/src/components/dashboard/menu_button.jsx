@@ -47,7 +47,7 @@ export default function MenuButton(props) {
     mediaUtil.handleNews(event, props);
 
     //Handles Spotify
-    mediaUtil.handleSpotify(event, props);
+    mediaUtil.handleImgur(event, props);
 
   }
 

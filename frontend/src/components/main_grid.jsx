@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import { defaultCipherList } from 'constants';
 import YoutubeList from './youtube/youtube_container';
 import NewsList from './news/news_articles_list_container';
+import ImgurList from './imgur/imgur_container';
 
 class MainGrid extends React.Component {
     render() {
@@ -36,8 +37,10 @@ class MainGrid extends React.Component {
               </Paper>
             </div>
 
-            <div className='Spotify-box' key="c">
-              <Paper className=""></Paper>
+            <div className='Imgur-box' key="c">
+              <Paper className="">
+                <ImgurList />
+              </Paper>
             </div>
 
             <div className='Placeholder-box' key="d">

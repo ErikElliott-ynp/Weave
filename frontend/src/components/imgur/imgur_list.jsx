@@ -7,7 +7,7 @@ class ImgurList extends React.Component{
     super(props)
 }
 componentDidMount(){
-    this.props.fetchImages()
+    this.props.fetchImages();
 }
 
 render(){
