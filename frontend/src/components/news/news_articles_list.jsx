@@ -29,7 +29,7 @@ function NewsArticlesList(props) {
             <ul className="news-list">
                 {articlesList}
             </ul>
-
+            <p className="credit-tag">Powered by NewsAPI</p>
         </div>
     )
 }
