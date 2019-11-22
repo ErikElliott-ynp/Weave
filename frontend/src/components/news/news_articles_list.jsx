@@ -20,7 +20,7 @@ function NewsArticlesList(props) {
         <div className="news-cont">
             <div className="search-cont">
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <input type="text" className="search-bar" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
+                    <input type="text" className="search-bar" value={search} onChange={(e) => setSearch(e.currentTarget.value)} placeholder="What topic interests you?"/>
                     <input type="submit" className="search-btn" value="Search"/>
                 </form>
             </div>

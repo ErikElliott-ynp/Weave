@@ -13,12 +13,57 @@
     display: flex;
     align-items: center;
     margin: 20px 0;
-    background: url()
+}
+.art-title {
+    font-family: 'Robot', sans-serif;
+    letter-spacing: .5px;
+    font-size: 20px;
+    line-height: 1.5rem; 
 }
 
 .credit-tag {
     font-size: 10px;
     font-style: italic;
-    font-family: 'typeface-robot';
+    font-family: 'Robot', sans-serif;
     margin-top: 10px;
+}
+
+.search-cont {
+    margin-top: 20px;
+}
+
+.search-bar {
+    margin-right: 10px;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px black solid;
+    outline: none;
+    padding-left: 15px;
+    &::placeholder {
+        font-family: 'Robot', sans-serif;
+    font-size: 14px;
+    }
+    font-size: 14px;
+}
+.search-btn {
+    border-radius: 6px;    
+    border: 1px solid black;
+    font-family: 'Robot', sans-serif;
+    letter-spacing: .5px;
+    font-size: 14px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+    font-family: 'Robot', sans-serif;
+}
+
+.news-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
