@@ -11,11 +11,10 @@ componentDidMount(){
 }
 
 render(){
-    debugger
         let imgurArray = <div className="imgur-posts">
-            {this.props.imgurPosts.map((post) => 
+            {this.props.imgurPosts.map((post, i) => 
                 <ImgurListItem 
-                    key={post.id}
+                    key={i}
                     className="imgur-item" post={post}
                 />
                 )}
