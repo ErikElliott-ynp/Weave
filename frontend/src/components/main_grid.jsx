@@ -22,6 +22,7 @@ class MainGrid extends React.Component {
             cols={12}
             width={1750}
             rowHeight={30}
+            draggableCancel="input"
           >
             <div className='YouTube-box' key="a">
               <Paper className="">
