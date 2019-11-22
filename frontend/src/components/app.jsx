@@ -8,8 +8,8 @@ import Splash from './splash';
 
 const App = () => (
   <Switch>
-    {/* <AuthRoute exact path="/" component={Splash} /> */}
-    <AuthRoute exact path="/" component={ImgurContainer} />
+    <AuthRoute exact path="/" component={Splash} />
+    {/* <AuthRoute exact path="/" component={ImgurContainer} /> */}
   </Switch>
 );
 
