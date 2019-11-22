@@ -9,10 +9,6 @@ function NewsArticlesList(props) {
         props.fetchSearchNews(search)
     }
 
-    const handleChange = (e) => {
-        setSearch(e.currentTarget.value)
-    }
-
     let articlesList = props.articles.map( (article, i) => {
         return <NewsArticle 
                 article={article}
