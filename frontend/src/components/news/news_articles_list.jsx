@@ -18,10 +18,12 @@ function NewsArticlesList(props) {
     
     return (
         <div className="news-cont">
-            <form onSubmit={(e) => handleSubmit(e)}>
-                <input type="text" className="search-bar" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
-                <input type="submit" className="search-btn" value="Search"/>
-            </form>
+            <div className="search-cont">
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <input type="text" className="search-bar" value={search} onChange={(e) => setSearch(e.currentTarget.value)} />
+                    <input type="submit" className="search-btn" value="Search"/>
+                </form>
+            </div>
             <ul className="news-list">
                 {articlesList}
             </ul>
