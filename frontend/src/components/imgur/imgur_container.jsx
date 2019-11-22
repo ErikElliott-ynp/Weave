@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ImgurList from "./imgur_list";
-import { fetchTopPosts } from "../../actions/imgur_actions";
+import { fetchTopImgur } from "../../actions/imgur_actions";
 
 
 const mapStateToProps = (state) => {
@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-      fetchImages: () => dispatch(fetchTopPosts())
+      fetchImages: () => dispatch(fetchTopImgur())
     };
 }
 
