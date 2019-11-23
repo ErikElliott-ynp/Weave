@@ -1,6 +1,6 @@
 import axios from 'axios'
 const clientId = '3f9aba6c3eff4420bc5b9c48eea5f163'
-const clientSecret = 'xxxxxxxxxxxx'
+const clientSecret = '79cceaba56044c2ca709e895ab882441'
 
 export const getAuthToken = () => {
     axios({
@@ -15,7 +15,7 @@ export const getAuthToken = () => {
         },
         auth: {
             username: '3f9aba6c3eff4420bc5b9c48eea5f163',
-            password: 'xxxxxxxxxxxx'
+            password: '79cceaba56044c2ca709e895ab882441'
         }
     }).then(function (response) {
         console.log(response);
@@ -42,7 +42,7 @@ export const fetchTrack = queryString => {
         },
         auth: {
             username: '3f9aba6c3eff4420bc5b9c48eea5f163',
-            password: 'xxxxxxxxxxxx'
+            password: '79cceaba56044c2ca709e895ab882441'
         }
     }).then(function (response) {
         console.log(response);
