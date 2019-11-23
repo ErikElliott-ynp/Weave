@@ -45,7 +45,7 @@
     }
     font-size: 14px;
 }
-.search-btn {
+#search-btn {
     border-radius: 6px;    
     border: 1px solid black;
     font-family: 'Robot', sans-serif;
@@ -54,6 +54,14 @@
     &:hover {
         cursor: pointer;
     }
+    width: 80px;
+    height: 20px;
+    outline: none;
+    text-align: center;
+}
+
+#search-btn span {
+    position: absolute;
 }
 
 a {

@@ -31,7 +31,7 @@ function NewsArticlesList(props) {
                         color="primary"
                         className="search-btn"
                     >
-                        {/* {this.props.formName} */}
+                        Search
                     </Button>
                 </form>
             </div>
