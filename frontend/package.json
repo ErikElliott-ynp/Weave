@@ -21,6 +21,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "sass": "^1.23.6",
+    "typeface-roboto": "0.0.75",
     "unirest": "^0.6.0"
   },
   "scripts": {

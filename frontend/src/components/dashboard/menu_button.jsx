@@ -76,6 +76,7 @@ export default function MenuButton(props) {
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
+        className="menu-options"
       >
         {options.map((option, index) => (
           <MenuItem
