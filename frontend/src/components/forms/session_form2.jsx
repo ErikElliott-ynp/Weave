@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withRouter, Redirect } from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -62,30 +63,19 @@ class SignInSide extends React.Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  // componentDidMount() {
-  //   if (this.state.password.length < 1) {
-  //     document.getElementById("login-button").disabled = true;
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.signedIn === true) {
+  //     this.props.history.push('/dashboard');
   //   }
+
+  //   // Set or clear errors
+  //   this.setState({ errors: nextProps.errors })
   // }
 
-  // componentDidUpdate() {
-  //   if (document.getElementById("login-button")) {
-  //     if (this.state.password.length < 1) {
-  //       document.getElementById("login-button").disabled = true;
-  //     } else {
-  //       document.getElementById("login-button").disabled = false;
-  //     }
-  //   }
-  // }
-
-  // Once the user has been authenticated, redirect to the Tweets page
-  componentWillReceiveProps(nextProps) {
-    // if (nextProps.signedIn === true) {
-    //   this.props.history.push('/dashboard');
-    // }
-
-    // Set or clear errors
-    this.setState({ errors: nextProps.errors })
+  redirect() {
+    if (this.props.signedIn === true ) {
+      return <Redirect to="/dashboard" />
+    }
   }
 
   // Handle field updates (called in the render method)
@@ -143,28 +133,13 @@ class SignInSide extends React.Component {
     }
   }
 
-  // formSwitchButtonText() {
-  //   if (!this.state.signupForm) {
-  //     return 'Sign up Instead.'
-  //   } else {
-  //     return 'Login?'
-  //   }
-  // }
-
-  // formTypeText() {
-  //   if (!this.state.signupForm) {
-  //     return 'Login'
-  //   } else {
-  //     return 'Sign up'
-  //   }
-  // }
-
-
   render() {
+
     const { classes } = this.props;
 
     return (
-<div>
+      <div>
+        {this.redirect()}
               <Paper>
 
         <CssBaseline />
@@ -249,4 +224,4 @@ class SignInSide extends React.Component {
   }
 }
 
-export default SignInSide;
+export default withRouter(SignInSide);
