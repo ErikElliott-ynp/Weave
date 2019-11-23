@@ -26,7 +26,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles(theme => ({
+const styles = makeStyles(theme => ({
   root: {
     height: '100vh',
   },
@@ -249,4 +249,4 @@ class SignInSide extends React.Component {
   }
 }
 
-export default withStyles(useStyles)(SignInSide);
+export default SignInSide;
