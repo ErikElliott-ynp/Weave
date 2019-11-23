@@ -50,7 +50,7 @@ export default function PermDrawer() {
                 <Divider />
 
                 <List>
-                    {["YouTube", "Google News", "Imgur"].map((text, index) => (
+                    {["YouTube", "News", "Imgur"].map((text, index) => (
                         <MenuButton key={index} >
                             <ListItem button key={text} primary={text} >
                                 <ListItemText primary={text} />

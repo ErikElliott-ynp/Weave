@@ -5,12 +5,20 @@ import MainGrid from '../main_grid';
 import DashSearch from './search_bar';
 import PermDrawer from './perm_drawer';
 import MenuButton from './menu_button';
+import { Redirect } from 'react-router-dom';
 
 class Dashboard extends React.Component {
+
+    redirect() {
+        if (this.props.signedIn === false ) {
+          return <Redirect to="/" />
+        }
+    }
+
     render() {
         return (
-            
             <div>
+                {this.redirect()}
                 <div>
                     <PermDrawer className="" />
                 </div>
