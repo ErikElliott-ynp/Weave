@@ -1,6 +1,14 @@
+
 .vid-list-item {
     width: min-content;
+    font-family: 'Robot', sans-serif;
     font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px 0 30px;
+    font-size: 26px;
+    letter-spacing: .5px;
+    align-items: center;
 }
 
 .vid-list-item:hover {
@@ -17,4 +25,13 @@
 
 .youtube-cont .button:hover {
     cursor: pointer;
+}
+
+.title-youtube {
+    margin-left: 15px;
+}
+
+.vid-thumb {
+    width: 420px;
+    height: 220px;
 }
