@@ -17,16 +17,19 @@ class YoutubeListItem extends React.Component {
     }
     
     render() {
-        let title = this.props.vid.snippet.title;
+        let title = <p className="title-youtube">{this.props.vid.snippet.title}</p>;
         let thumbnail = <img src={this.props.vid.snippet.thumbnails.default.url} alt="thumbnail" className="vid-thumb"/>
         let id = this.props.vid.id
         if (!this.state.showPage) {
             return (
-            <li 
-            onClick={this.handleClick}
-            className="vid-list-item">
-                {thumbnail}
-                {title}
+            <li>
+                <div  
+                onClick={this.handleClick}
+                className="vid-list-item">
+
+                    {thumbnail}
+                    {title}
+            </div>
             </li>
             )
         } else {

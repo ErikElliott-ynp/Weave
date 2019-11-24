@@ -12,11 +12,11 @@ export const handleYoutube = (event, props) => {
 
 export const handleNews = (event, props) => {
     const target = event.currentTarget;
-    if (target.id === "Google News" && target.innerText === "Main Feed") {
+    if (target.id === "News" && target.innerText === "Main Feed") {
         document.querySelector(".GoogleNews-box").style.visibility = "visible"
         props.fetchNewsMostPopular();
 
-    } else if (target.id === "Google News" && target.innerText === "Off") {
+    } else if (target.id === "News" && target.innerText === "Off") {
         document.querySelector(".GoogleNews-box").style.visibility = "hidden";
         props.clearNews();
     } 

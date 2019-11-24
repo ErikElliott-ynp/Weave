@@ -13,4 +13,13 @@ router.get('/youtubeMostPopular', (req, res) => {
 })
 
 
+router.get('/youtubeSearch', (req, res) => {
+    axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${req.body.topic}&type=video&key=${keys.youtubeApiKey}`)
+        .then( videos => {
+            res.json({
+                videos: videos.data.items
+            })
+        })
+})
+
 module.exports = router

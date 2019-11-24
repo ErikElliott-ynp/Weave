@@ -1,22 +1,26 @@
 .YouTube-box {
-    // display: none;
     visibility: hidden;
     overflow-y: auto;
+    background: #08a4bd;
+    border-radius: 10px;
+    width: min-content;
 }
 
 .GoogleNews-box {
-    // display: none;
     visibility: hidden;
     overflow-y: auto;
+    background-color: #e4572e;
+    border-radius: 10px;
 }
 
 .Imgur-box {
-    // display: none;
     visibility: hidden;
     overflow-y: auto;
+    background: #f3a712; 
+    border-radius: 10px;
 }
 
 .Placeholder-box {
-    // display: none;
     visibility: hidden;
 }
+

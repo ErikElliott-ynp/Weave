@@ -2,13 +2,12 @@ import { RECEIVE_VIDEOS, RECEIVE_VIDEO, CLEAR_VIDEOS } from "../actions/youtube_
 
 const YoutubeVideosReducer = (state = [], action) => {
     Object.freeze(state);
-    let nextState = Object.assign([], state)
+    let nextState = Object.assign([], state);
     switch (action.type) {
         case RECEIVE_VIDEOS:
             return nextState.concat(action.videos);
         case RECEIVE_VIDEO:
-            nextState.push(action.video.item[0])
-            return nextState;
+            return nextState.concat(action.video);
         case CLEAR_VIDEOS:
             return [];
         default:
