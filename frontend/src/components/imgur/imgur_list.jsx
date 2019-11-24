@@ -1,12 +1,10 @@
 import React from "react";
 import ImgurListItem from "./imgur_list_item";
+import Button from "@material-ui/core/Button";
+
 
 class ImgurList extends React.Component{
     
-componentDidMount(){
-    // this.props.fetchImages();
-}
-
 render(){
         let imgurArray = <div className="imgur-posts">
             {this.props.imgurPosts.map((post, i) => 
@@ -17,12 +15,22 @@ render(){
                 )}
         </div>
 
-        // {Object.values(this.props.posts).map
-        //         (post => <PostIndexItem key={post.id}
-        //             className="singlePost" post={post} />)}
 
         return( 
-        <div>{imgurArray}</div>)
+        <div className="imgur-grid">
+                <Button
+                    id="imgr-btn"
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    className="search-btn"
+                    onClick={() => this.props.fetchImages()}
+                >
+                    Refresh Images
+                    </Button>
+            {imgurArray}
+        </div>)
     }
 }
 
