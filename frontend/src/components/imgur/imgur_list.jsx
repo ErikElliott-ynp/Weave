@@ -4,7 +4,7 @@ import ImgurListItem from "./imgur_list_item";
 class ImgurList extends React.Component{
     
 componentDidMount(){
-    this.props.fetchImages();
+    // this.props.fetchImages();
 }
 
 render(){

@@ -15,7 +15,7 @@ const mDTP = dispatch => {
         clearNews: () => dispatch(clearNews()),
 
         fetchTopImgur: () => dispatch(fetchTopImgur()),
-        clearImgur: () => dispatch(clearImgur())
+        clearImgur: () => dispatch(clearImgur()),
     }
 }
 
