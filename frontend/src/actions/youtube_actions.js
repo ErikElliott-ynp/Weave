@@ -40,9 +40,8 @@ export const fetchYoutubeMostPopular = () => dispatch => {
 }
 
 export const fetchYoutubeSearch = topic => dispatch => {
-    debugger
     return YoutubeAPIUtil.fetchYoutubeSearch(topic)
-        .then( video => dispatch(receiveVideo(video)),
+        .then( videos => dispatch(receiveVideo(videos.data.items)),
         errors => dispatch(receiveYoutubeErrors(errors))
         )
 } 

@@ -14,8 +14,8 @@ class YoutubeList extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.clearVideos();
-        debugger
         this.props.fetchSearch({ topic: this.state.search } )
+        this.setState({search: ""   })
     }
 
     handleChange(e) {
@@ -23,18 +23,21 @@ class YoutubeList extends React.Component {
     }
 
     render() {
-        let list = <ul className="youtube-list">
-            {this.props.videos.map(vid => {
-                return <YoutubeListItem
-                    key={vid.id}
-                    vid={vid}
-                    fetchSingleVideo={this.props.fetchSingleVideo}
-                />
-            })}
-        </ul>
+        let list;
+        if (this.props.videos[0]) {
+            list = <ul className="youtube-list">
+                {this.props.videos.map((vid, i) => {
+                    return <YoutubeListItem
+                        key={i}
+                        vid={vid}
+                        fetchSingleVideo={this.props.fetchSingleVideo}
+                    />
+                })}
+            </ul>
+        }
         return (
             <div className="youtube-cont">
-                <form onSubmit={(e) => this.handleSubmit(e)}>
+                <form id="yt-search" onSubmit={(e) => this.handleSubmit(e)}>
                     <input type="text" className="search-bar" value={this.state.search} onChange={(e) => this.handleChange(e)} placeholder="What are you looking?" />
                     <Button
                         id="search-btn"

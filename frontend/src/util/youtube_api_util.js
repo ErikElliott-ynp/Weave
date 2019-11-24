@@ -5,9 +5,12 @@ export const youtubeMostPopular = () => {
     return axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${key}&chart=mostPopular&regionCode=US`)
 }
 
+// export const fetchYoutubeSearch = topic => {
+//     return axios.get('api/youtube/youtubeSearch', topic )
+// }
+
 export const fetchYoutubeSearch = topic => {
-    debugger
-    return axios.get('api/youtube/youtubeSearch', topic )
+    return axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${topic.topic}&type=video&key=${key}` )
 }
 
 

@@ -10,7 +10,6 @@ const mSTP = (state) => {
 }
 
 const mDTP = dispatch => {
-    debugger
     return {
         fetchSearch: topic => dispatch(fetchYoutubeSearch(topic)),
         clearVideos: () => dispatch(clearVideos())
