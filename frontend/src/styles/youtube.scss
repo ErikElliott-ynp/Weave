@@ -1,14 +1,28 @@
+
 .vid-list-item {
     width: min-content;
+    font-family: 'Robot', sans-serif;
     font-size: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px 15px 30px;
+    font-size: 26px;
+    letter-spacing: .5px;
+    align-items: center;
 }
 
 .vid-list-item:hover {
     cursor: pointer;
 }
 
+#ytplayer {
+    width: 92%;
+    margin-left: 20px;
+}
+
 .youtube-show-close {
     cursor: pointer;
+    margin-left: 11px;
 }
 
 .playground .youtube-container {
@@ -17,4 +31,17 @@
 
 .youtube-cont .button:hover {
     cursor: pointer;
+}
+
+.title-youtube {
+    margin-left: 15px;
+}
+
+.vid-thumb {
+    width: 320px;
+    height: 120px;
+}
+
+#yt-search {
+    margin: 15px 0 15px 135px;
 }

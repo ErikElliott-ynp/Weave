@@ -1,4 +1,26 @@
-.title {
-
+.image {
+    width: 200px;
+    height: 200px;
 }
 
+.imgur-posts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+
+.whole-post {
+    margin: 15px;
+}
+
+#imgr-btn {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    margin: 15px 0;
+    left: 35%;
+}
