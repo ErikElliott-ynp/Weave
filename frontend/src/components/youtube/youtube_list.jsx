@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import YoutubeListItem from "./youtube_list_item"
+import YoutubeListItem from "./youtube_list_item";
+import Button from "@material-ui/core/Button";
+
 
 class YoutubeList extends React.Component {
     constructor(props) {
         super(props)
-
-        this.testClick = this.testClick.bind(this);
+        this.state = {
+            search: ""
+        }
     }
 
-    // componentDidMount() {
-    //     if (document.querySelector('.youtube-box').style.visibility === "visible") {
-    //         this.props.fetchVideos();
-    //     }
-    // }
-
-    testClick() {
-        this.props.fetchVideos();
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.clearVideos();
+        debugger
+        this.props.fetchSearch({ topic: this.state.search } )
     }
 
+    handleChange(e) {
+        this.setState({ search: e.currentTarget.value })
+    }
 
     render() {
         let list = <ul className="youtube-list">
@@ -31,8 +34,20 @@ class YoutubeList extends React.Component {
         </ul>
         return (
             <div className="youtube-cont">
+                <form onSubmit={(e) => this.handleSubmit(e)}>
+                    <input type="text" className="search-bar" value={this.state.search} onChange={(e) => this.handleChange(e)} placeholder="What are you looking?" />
+                    <Button
+                        id="search-btn"
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        color="primary"
+                        className="search-btn"
+                    >
+                        Search
+                    </Button>
+                </form>
                 {list}
-                {/* <div className="button" onClick={this.testClick} > CLICK ME TO FETCH</div> */}
             </div>
         )
     }

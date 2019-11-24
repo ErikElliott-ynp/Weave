@@ -5,7 +5,7 @@
     font-size: 14px;
     display: flex;
     justify-content: space-evenly;
-    margin: 30px 0px 0 30px;
+    margin: 30px 0px 15px 30px;
     font-size: 26px;
     letter-spacing: .5px;
     align-items: center;
@@ -15,8 +15,14 @@
     cursor: pointer;
 }
 
+#ytplayer {
+    width: 92%;
+    margin-left: 20px;
+}
+
 .youtube-show-close {
     cursor: pointer;
+    margin-left: 11px;
 }
 
 .playground .youtube-container {
@@ -32,6 +38,6 @@
 }
 
 .vid-thumb {
-    width: 420px;
-    height: 220px;
+    width: 320px;
+    height: 120px;
 }
