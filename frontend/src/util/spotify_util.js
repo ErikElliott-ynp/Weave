@@ -22,7 +22,6 @@ export const getAuthToken = () => {
 
         }
     }).then(function (response) {
-        console.log(response);
     }).catch(function (error) {
     });
 
@@ -55,7 +54,6 @@ export const fetchTrack = queryString => {
 
         }
     }).then(function (response) {
-        console.log(response);
     }).catch(function (error) {
     });
 
