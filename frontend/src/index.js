@@ -57,3 +57,5 @@ let mods = Array.from(document.getElementsByClassName('Muipopover-paper'));
 mods.forEach( mod => {
     mod.classList.add('menu-options');
 })
+
+document.title = 'Weave';
