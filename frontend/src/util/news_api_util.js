@@ -1,5 +1,5 @@
 import axios from 'axios';
-const key = process.env.REACT_APP_NEWS_API_KEY;
+const key = process.env.NEWS_API_KEY;
 
 export const newsUSMostPopular = () => {
     return axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`)
