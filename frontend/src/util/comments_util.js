@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 export const getComments = () => {
-    return axios.get('/api/tweets')
+    debugger
+    return axios.get('/api/comments')
 };
 
 export const writeComment = data => {
-    return axios.post('/api/tweets/', data)
+    return axios.post('/api/comments/', data)
 }
