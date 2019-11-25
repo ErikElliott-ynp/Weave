@@ -3,19 +3,27 @@ import YoutubeContainer from "../youtube/youtube_container";
 import NewsArticlesListContainer from "../news/news_articles_list_container";
 import MainGrid from '../main_grid';
 import DashSearch from './search_bar';
-import PermDrawer from './perm_drawer';
+import PermDrawerContainer from './perm_drawer_container';
 import MenuButton from './menu_button';
+import { Redirect } from 'react-router-dom';
 
 class Dashboard extends React.Component {
+
+    redirect() {
+        if (this.props.signedIn === false ) {
+          return <Redirect to="/" />
+        }
+    }
+
     render() {
         return (
-            
             <div>
+                {this.redirect()}
                 <div>
-                    <PermDrawer className="" />
+                    <PermDrawerContainer className="" />
                 </div>
             <div>
-                <PermDrawer />
+                <PermDrawerContainer />
             </div>
 
             <div>
