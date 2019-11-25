@@ -2,7 +2,7 @@ import axios from 'axios'
 const key = require('../keys')
 
 export const youtubeMostPopular = () => {
-    return axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${key}&chart=mostPopular&regionCode=US`)
+    return axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${key.youtubeApiKey}&chart=mostPopular&regionCode=US`)
 }
 
 export const fetchYoutubeSearch = topic => {
