@@ -9,6 +9,7 @@ import MenuButton from "./menu_button_container";
 
 
 
+
 const drawerWidth = 140;
 
 const useStyles = makeStyles(theme => ({
@@ -34,8 +35,9 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function PermDrawer() {
+export default function PermDrawer(props) {
     const classes = useStyles();
+    const logout = props.logout;
 
     return (
         <div className={classes.root}>
@@ -50,13 +52,18 @@ export default function PermDrawer() {
                 <Divider />
 
                 <List>
-                    {["YouTube", "Google News", "Imgur"].map((text, index) => (
+                    {["YouTube", "News", "Imgur"].map((text, index) => (
                         <MenuButton key={index} >
                             <ListItem button key={text} primary={text} >
                                 <ListItemText primary={text} />
                             </ListItem>
                         </MenuButton>
                     ))}
+                        <ListItem 
+                        onClick={logout}
+                        className="logout-button">
+                                <ListItemText primary={"Logout"} />
+                        </ListItem>
                 </List>
 
                 <Divider />

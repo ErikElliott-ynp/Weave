@@ -5,9 +5,14 @@ export const youtubeMostPopular = () => {
     return axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${key}&chart=mostPopular&regionCode=US`)
 }
 
-export const fetchYoutubeVideo = id => {
-    return axios.get(`https://www.googleapis.com/youtube/v3/videos?key=${key}&part=player&id=${id}&withCredentials=true`)
+// export const fetchYoutubeSearch = topic => {
+//     return axios.get('api/youtube/youtubeSearch', topic )
+// }
+
+export const fetchYoutubeSearch = topic => {
+    return axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${topic.topic}&type=video&key=${key}` )
 }
+
 
 export const backendFetch = () => {
     return axios.get('/api/youtube/youtubeMostPopular')

@@ -179,6 +179,8 @@ padding-left: 10px;
 
 div.react-grid-item:nth-child(3) > div:nth-child(1) {
   background: #f3a712;
+  width: 200px;
+  height: 300px;
 }
 
 /* Element | http://localhost:3000/?email=&password=&password=#/ */
@@ -191,24 +193,33 @@ div.react-grid-item:nth-child(3) > div:nth-child(1) {
 
 div.react-grid-item:nth-child(4) > div:nth-child(1) {
   background: #657eeb;
+  width: 200px;
+  height: 300px;
 }
 
 /* Element | http://localhost:3000/?email=&password=&password=#/ */
 
 div.react-grid-item:nth-child(5) > div:nth-child(1) {
   background: #29335c;
+  width: 200px;
+  height: 300px;
 }
 
 /* Element | http://localhost:3000/?email=&password=&password=#/ */
 
 div.react-grid-item:nth-child(2) > div:nth-child(1) {
   background: #e4572e;
+  width: 200px;
+  height: 300px;
 }
 
 /* Element | http://localhost:3000/?email=&password=&password=#/ */
 
 div.react-grid-item:nth-child(1) > div:nth-child(1) {
   background: #08a4bd;
+  width: 200px;
+  height: 300px;
+  // background-image: url("../../public/Alex_Nguyen1.jpg")
 }
 
 
@@ -229,4 +240,8 @@ h1.MuiTypography-root {
   margin-top: 20px;
 }
 
+.MuiPaper-rounded {
+  border: none;
+  outline: none;
+}
 

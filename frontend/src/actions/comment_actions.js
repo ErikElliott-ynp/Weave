@@ -4,12 +4,12 @@ export const RECEIVE_COMMENTS = "RECEIVE_COMMENTS";
 export const RECEIVE_NEW_COMMENT = "RECEIVE_NEW_COMMENT";
 // export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS'
 
-debugger;
+
+
 export const receiveComments = comments => ({
     type: RECEIVE_COMMENTS,
     comments
 });
-
 
 export const receiveNewComment = comment => ({
     type: RECEIVE_NEW_COMMENT,

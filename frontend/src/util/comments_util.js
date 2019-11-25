@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const getComments = () => {
-    debugger
     return axios.get('/api/comments')
 };
 

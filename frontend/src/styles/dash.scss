@@ -118,6 +118,15 @@ padding-right: 0px;
   max-height: calc(30% - 32px);
 }
 
+.logout-button:hover {
+  cursor: pointer;
+  background-color: rgb(233, 233, 233);
+}
+
+.menu-options {
+  height: 185px;
+  width: 300px;
+}
 
 
 

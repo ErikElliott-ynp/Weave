@@ -18,6 +18,7 @@ export const fetchTopImgur = () => dispatch => {
   return ImgurUtil.fetchImgurTopPosts().then(posts => dispatch(receiveAllImgurPosts(posts)))};
 
 
-//export const fetchPosts = () => dispatch => (
-//     postUtil.fetchPosts().then(posts => dispatch(receivePosts(posts)))
-// )
+export const fetchImgurSearch = topic =>  dispatch => {
+  return ImgurUtil.fetchImgurSearch(topic)
+    .then( posts => dispatch(receiveAllImgurPosts(posts)))
+}

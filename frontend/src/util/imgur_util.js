@@ -2,3 +2,8 @@ import axios from "axios";
 
 export const fetchImgurTopPosts = () =>
        { return axios.get("https://api.imgur.com/3/gallery/hot/viral/0.json");};
+
+
+export const fetchImgurSearch = topic => {
+    return axios.get(`https://api.imgur.com/3/gallery/search/viral/day/0?q=${topic}`)
+}
