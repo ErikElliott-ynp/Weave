@@ -2,6 +2,7 @@ import axios from 'axios';
 const key = require('../keys');
 
 export const newsUSMostPopular = () => {
+    debugger
     return axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${key.newsApiKey}`)
 }
 
