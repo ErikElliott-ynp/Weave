@@ -1,5 +1,5 @@
 import axios from 'axios';
-const key = require('../keys');
+const key = require('../../../config/keys');
 
 export const newsUSMostPopular = () => {
     debugger

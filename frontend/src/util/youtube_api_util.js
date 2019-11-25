@@ -1,5 +1,5 @@
 import axios from 'axios'
-const key = require('../keys')
+const key = require('../../../config/keys')
 
 export const youtubeMostPopular = () => {
     return axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${key.youtubeApiKey}&chart=mostPopular&regionCode=US`)
