@@ -14,7 +14,7 @@ import { fetchComments } from './actions/comment_actions'
 
 import { models } from 'mongoose';
 import { fetchYoutubeSearch } from "./util/youtube_api_util";
- 
+ import keys from "./keys";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.fetchComments = fetchComments;
     // window.fetchTopPosts = fetchTopPosts;
     window.fetchYoutubeSearch = fetchYoutubeSearch;
-    
+    window.keys = keys
 
     const root = document.getElementById('root');
 
