@@ -47,7 +47,11 @@ Weave is user-friendly, interactive, and customizable social media application w
 
 #### Optimizing Frontend Calls
 
-![Screen Shot 2019-12-03 at 2 14 15 PM](https://user-images.githubusercontent.com/43099538/70095641-240b5e00-15da-11ea-8a65-dfcab5191314.png)
-
+  For testing purposes, we made our frontend calls when the component mounted. We instead decided to have the calls occur when the button for turning a single box on, thus improving the dashboard's initial load speed.
+  
 ![Screen Shot 2019-12-03 at 2 13 23 PM](https://user-images.githubusercontent.com/43099538/70095642-253c8b00-15da-11ea-9375-c293a7648f93.png)
+
+  We then broke down functions that were doing more work so that the code would be more readable. 
+  
+  ![Screen Shot 2019-12-03 at 2 14 15 PM](https://user-images.githubusercontent.com/43099538/70095641-240b5e00-15da-11ea-8a65-dfcab5191314.png)
 
