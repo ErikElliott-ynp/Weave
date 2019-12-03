@@ -149,15 +149,15 @@ class SignInSide extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <div className="form">
         {this.redirect()}
               <Paper>
 
         <CssBaseline />
 
           <div className={classes.paper}>
-            <Avatar className={classes.avatar}>
-              <LockOutlinedIcon />
+            <Avatar className={classes.avatar} id="avatar">
+              WEAVE
             </Avatar>
             <Typography component="h1" variant="h5">
               {this.props.formName}
