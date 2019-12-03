@@ -32,15 +32,15 @@ export const clearNews = () => {
 }
 
 export const fetchNewsMostPopular = () => dispatch => {
-    return NewsAPIUtil.newsUSMostPopular()
-        .then( articles => dispatch(receiveNewsArticles(articles)),
+    return NewsAPIUtil.backendPopularNews()
+        .then( news => dispatch(receiveNewsArticles(news.data.news)),
         errors => dispatch(receiveNewsErrors(errors))
         )
 }
 
 export const fetchNewsBySearchTopic = topic => dispatch => {
-    return NewsAPIUtil.newsSearchTopic(topic)
-        .then( articles => dispatch(receiveNewsArticles(articles)),
+    return NewsAPIUtil.backendNewsSearch(topic)
+        .then( articles => dispatch(receiveNewsArticles(articles.data.news)),
         errors => dispatch(receiveNewsErrors(errors))
         )
 }
