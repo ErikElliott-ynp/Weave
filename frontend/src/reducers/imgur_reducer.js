@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_IMGUR_POSTS, CLEAR_IMGUR } from "../actions/imgur_actions";
 
-const redditReducer = (
+const imgurReducer = (
   state = [],
   action
 ) => {
@@ -16,4 +16,4 @@ const redditReducer = (
   }
 };
 
-export default redditReducer;
+export default imgurReducer;

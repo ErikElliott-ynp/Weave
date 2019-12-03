@@ -20,6 +20,6 @@ export const fetchTopImgur = () => dispatch => {
 
 
 export const fetchImgurSearch = topic =>  dispatch => {
-  return ImgurUtil.fetchImgurSearch(topic)
+  return ImgurUtil.backendImgurSearch(topic)
     .then( posts => dispatch(receiveAllImgurPosts(posts)))
 }
