@@ -15,6 +15,18 @@ class Splash extends React.Component {
         this.formSwitch = this.formSwitch.bind(this);
     }
 
+    componentDidMount() {
+        document.querySelector(".MuiAvatar-root").id = "signup-a";
+    }
+
+    componentDidUpdate() {
+        if (this.state.signupForm) {
+            document.querySelector(".MuiAvatar-root").id = "signup-a";
+        } else {
+            document.querySelector(".MuiAvatar-root").id = "login-a";
+        }
+    }
+
     formSwitch() {
         this.setState({ signupForm: !this.state.signupForm });
         this.props.clearErrors();
