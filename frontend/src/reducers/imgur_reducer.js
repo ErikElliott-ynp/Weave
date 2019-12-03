@@ -9,6 +9,7 @@ const imgurReducer = (
   switch (action.type) {
       case RECEIVE_ALL_IMGUR_POSTS:
           return action.posts;
+          debugger
       case CLEAR_IMGUR:
           return [];
     default:
