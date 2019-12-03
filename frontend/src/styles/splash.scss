@@ -147,6 +147,7 @@ h1.MuiTypography-root {
 
 .lilHomieForm > div:nth-child(1) {
 height: 100vh;
+max-width: 608px;
 padding-right: 10px;
 border-right-width: 0px;
 border-right-style: solid;
@@ -264,7 +265,7 @@ h1.MuiTypography-root {
 
 #signup-a {
   position: relative;
-  right: 150px;
+  right: 160px;
 }
 
 #login-a {

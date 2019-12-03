@@ -149,7 +149,7 @@ class SignInSide extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <div className="form">
         {this.redirect()}
               <Paper>
 
