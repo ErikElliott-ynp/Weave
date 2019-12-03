@@ -156,8 +156,8 @@ class SignInSide extends React.Component {
         <CssBaseline />
 
           <div className={classes.paper}>
-            <Avatar className={classes.avatar}>
-              <LockOutlinedIcon />
+            <Avatar className={classes.avatar} id="avatar">
+              WEAVE
             </Avatar>
             <Typography component="h1" variant="h5">
               {this.props.formName}
