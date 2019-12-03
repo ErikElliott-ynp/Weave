@@ -263,9 +263,16 @@ h1.MuiTypography-root {
 }
 
 #signup-a {
-
+  position: relative;
+  right: 150px;
 }
 
 #login-a {
-  
+  right: 212px;
+  position: relative;
+}
+
+.MuiAvatar-root {
+  right: 212px;
+  position: relative;
 }
