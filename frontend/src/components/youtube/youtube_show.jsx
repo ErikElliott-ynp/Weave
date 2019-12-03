@@ -1,7 +1,13 @@
 import React from "react";
 
 function YoutubeShow(props) {
-    let id = props.vidId;
+    let id = "";
+    if (typeof props.vidId === "object") {
+        id = props.vidId.videoId;
+    } else {
+        id = props.vidId;
+    }
+    
     return (
         <div className='youtube-show'>
             <iframe id="ytplayer" type="text/html" width="640" height="360"
