@@ -4,7 +4,7 @@ const NewsReducer = ( state = [], action) => {
     Object.freeze(state)
     switch (action.type) {
         case RECEIVE_NEWS_ARTICLES:
-            return Object.assign([], action.articles.data.articles)        
+            return Object.assign([], action.articles)        
         case CLEAR_NEWS:
             return [];
         default:
