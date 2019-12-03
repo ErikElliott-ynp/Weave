@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_IMGUR_POSTS, CLEAR_IMGUR } from "../actions/imgur_actions";
 
-const redditReducer = (
+const imgurReducer = (
   state = [],
   action
 ) => {
@@ -8,7 +8,7 @@ const redditReducer = (
   let newState = Object.assign([], state);
   switch (action.type) {
       case RECEIVE_ALL_IMGUR_POSTS:
-          return action.posts.data.data;
+          return action.posts;
       case CLEAR_IMGUR:
           return [];
     default:
@@ -16,4 +16,4 @@ const redditReducer = (
   }
 };
 
-export default redditReducer;
+export default imgurReducer;

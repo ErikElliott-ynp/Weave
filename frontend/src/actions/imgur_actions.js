@@ -15,10 +15,11 @@ export const clearImgur = () => {
 }
 
 export const fetchTopImgur = () => dispatch => {
-  return ImgurUtil.fetchImgurTopPosts().then(posts => dispatch(receiveAllImgurPosts(posts)))};
+  return ImgurUtil.backendImgurTop()
+    .then(posts => dispatch(receiveAllImgurPosts(posts.data.images)))};
 
 
 export const fetchImgurSearch = topic =>  dispatch => {
-  return ImgurUtil.fetchImgurSearch(topic)
+  return ImgurUtil.backendImgurSearch(topic)
     .then( posts => dispatch(receiveAllImgurPosts(posts)))
 }

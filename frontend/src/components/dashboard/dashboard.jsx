@@ -26,9 +26,6 @@ class Dashboard extends React.Component {
                 <PermDrawerContainer />
             </div>
 
-            <div>
-                <DashSearch />
-            </div>
 
                 <div className="playground">
                     <MainGrid />

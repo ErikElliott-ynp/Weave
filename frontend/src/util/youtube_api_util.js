@@ -6,10 +6,18 @@ export const youtubeMostPopular = () => {
 }
 
 export const fetchYoutubeSearch = topic => {
-    return axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${topic.topic}&type=video&key=${key.youtubeApiKey}` )
+    return axios.post(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${topic.topic}&type=video&key=${key.youtubeApiKey}`,{
+        topic
+    } )
 }
 
 
 export const backendFetch = () => {
     return axios.get('/api/youtube/youtubeMostPopular')
+}
+
+export const backendYoutubeSearch = (topic) => {
+    return axios.post('/api/youtube/youtubeSearch', {
+        topic
+    })
 }
