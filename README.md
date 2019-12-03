@@ -44,3 +44,10 @@ Weave is user-friendly, interactive, and customizable social media application w
   The different API calls had to be routed through the Express backend to avoid CORS and authorization issues. The resulting data was then served back to the frontend for use in the components.
   
 ![API Routes](https://user-images.githubusercontent.com/51393952/70092889-1e127e80-15d4-11ea-8f2c-6842e108eed7.jpg)
+
+#### Optimizing Frontend Calls
+
+![Screen Shot 2019-12-03 at 2 14 15 PM](https://user-images.githubusercontent.com/43099538/70095641-240b5e00-15da-11ea-8a65-dfcab5191314.png)
+
+![Screen Shot 2019-12-03 at 2 13 23 PM](https://user-images.githubusercontent.com/43099538/70095642-253c8b00-15da-11ea-9375-c293a7648f93.png)
+
