@@ -36,7 +36,7 @@ render(){
 
         return( 
         <div className="imgur-grid">
-                {/* <form id="imgur-search" onSubmit={(e) => this.handleSubmit(e)}>
+                <form id="imgur-search" onSubmit={(e) => this.handleSubmit(e)}>
                     <input type="text" className="search-bar" value={this.state.search} onChange={(e) => this.handleChange(e)} placeholder="What are you looking?" />
                     <Button
                         id="search-btn"
@@ -48,7 +48,7 @@ render(){
                     >
                         Search
                     </Button>
-                </form> */}
+                </form>
                 <Button
                     id="imgr-btn"
                     type="submit"

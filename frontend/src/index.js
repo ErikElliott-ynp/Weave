@@ -4,17 +4,10 @@ import Root from "./components/root"
 import configureStore from './/store/store';
 import jwt_decode from 'jwt-decode';
 import { setAuthToken } from "./util/session_api_util";
-import { logout, signup, login } from "./actions/session_actions";
+import { logout } from "./actions/session_actions";
 import './styles/app.scss';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
-import axios from 'axios'
-import { fetchTopPosts } from './actions/imgur_actions'
-import { fetchComments } from './actions/comment_actions'
-
-import { models } from 'mongoose';
-import { fetchYoutubeSearch } from "./util/youtube_api_util";
- import keys from "./keys";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,15 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore({});
     }
 
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
-    window.fetchComments = fetchComments;
-    // window.fetchTopPosts = fetchTopPosts;
-    window.fetchYoutubeSearch = fetchYoutubeSearch;
-    window.keys = keys
 
     const root = document.getElementById('root');
 

@@ -15,7 +15,8 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 const youtube = require('./routes/api/youtube');
-const news = require('./routes/api/news')
+const news = require('./routes/api/news');
+const imgur = require('./routes/api/imgur');
 
 mongoose
     .connect(db, { useNewUrlParser: true })
@@ -35,6 +36,8 @@ app.use('/api/users', users);
 app.use('/api/youtube', youtube);
 
 app.use('/api/news', news);
+
+app.use('/api/imgur', imgur);
 
 const port = process.env.PORT || 5000;
 
