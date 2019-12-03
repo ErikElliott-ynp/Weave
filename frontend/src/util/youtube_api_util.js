@@ -15,3 +15,9 @@ export const fetchYoutubeSearch = topic => {
 export const backendFetch = () => {
     return axios.get('/api/youtube/youtubeMostPopular')
 }
+
+export const backendYoutubeSearch = (topic) => {
+    return axios.post('/api/youtube/youtubeSearch', {
+        topic
+    })
+}

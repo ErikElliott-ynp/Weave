@@ -14,8 +14,7 @@ router.get('/youtubeMostPopular', (req, res) => {
 
 
 router.post('/youtubeSearch', (req, res) => {
-    debugger
-    axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${req.body.topic}&type=video&key=${keys.youtubeApiKey}`)
+    axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&q=${req.body.topic.topic}&type=video&key=${keys.youtubeApiKey}`)
         .then( videos => {
             res.json({
                 videos: videos.data.items
