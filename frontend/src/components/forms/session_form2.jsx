@@ -61,6 +61,7 @@ class SignInSide extends React.Component {
     
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   // componentWillReceiveProps(nextProps) {
@@ -94,6 +95,16 @@ class SignInSide extends React.Component {
       password: this.state.password,
       password2: this.state.password2
     };
+
+    this.props.process(user);
+  }
+
+  handleDemo() {
+
+    let user = {
+      email: "b@gmail.com",
+      password: "mountain"
+    }
 
     this.props.process(user);
   }
@@ -213,10 +224,22 @@ class SignInSide extends React.Component {
                 {this.props.formName}
               </Button>
 
+            </form>
+            <Button
+              id="demo-button"
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              onClick={() => this.handleDemo()}
+            >
+              Demo
+              </Button>
+
               <Box mt={5}>
                 <Copyright />
               </Box>
-            </form>
           </div>
               </Paper>
       </div>
