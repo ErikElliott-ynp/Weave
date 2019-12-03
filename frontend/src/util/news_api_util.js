@@ -13,3 +13,6 @@ export const newsSearchTopic = topic => {
     return axios.get(`${url}`);
 }
 
+export const backendPopularNews = () => {
+    return axios.get(`/api/news/popularNews`)
+}
