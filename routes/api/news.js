@@ -17,9 +17,9 @@ router.post('/newsSearch', (req, res) => {
         `q=${req.body.topic}&sortBy=relevance&`
         + `apiKey=${keys.newsApiKey}`;
     axios.get(url)
-        .then( news => {
+        .then( response => {
             res.json({
-                news: news.data.articles
+                news: response.data.articles
             })
         })
 })
