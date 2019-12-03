@@ -18,6 +18,11 @@ class Splash extends React.Component {
     formSwitch() {
         this.setState({ signupForm: !this.state.signupForm });
         this.props.clearErrors();
+        if (document.querySelector("#sign-up")) {
+            document.querySelector("#sign-up").id = "login";
+        } else {
+            document.querySelector("#login").id = "sign-up";
+        }
     }
 
     form() {
@@ -43,7 +48,7 @@ class Splash extends React.Component {
 
             <div className="lilHomieForm">
                 {this.form()}
-                <Link id="form-change" onClick={this.formSwitch} href="#" variant="body2">
+                <Link id="sign-up" onClick={this.formSwitch} href="#" variant="body2">
                     {this.formSwitchButtonText()}
                 </Link>
             </div>
