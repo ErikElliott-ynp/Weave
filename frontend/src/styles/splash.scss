@@ -238,6 +238,7 @@ h1.MuiTypography-root {
   position: relative;
   left: -120px;
   top: 270px;
+  width: max-content;
 }
 
 #login {
@@ -285,7 +286,7 @@ h1.MuiTypography-root {
   opacity: 90%;
 }
 
-.react-grid-layout.layout {
+.react-grid-layout {
     background-color: wheat;
     width: 800px;
     height: 100vh;

@@ -7,15 +7,16 @@ class SplashGrid extends React.Component {
     render() {
 
         var layout = [
-            { i: "a", x: 3, y: 0, w: 3, h: 2 },
-            { i: "b", x: 0, y: 0, w: 3, h: 8, minW: 2, maxW: 6 },
-            { i: "c", x: 4, y: 0, w: 5, h: 5 },
-            { i: "d", x: 3, y: 0, w: 1, h: 9 },
-            { i: "e", x: 10, y: 0, w: 3, h: 9 },
+            { i: "a", x: 0, y: 0, w: 3, h: 1 },
+            { i: "b", x: 3, y: 0, w: 3, h: 1 },
+            { i: "c", x: 0, y: 1, w: 3, h: 1 },
+            { i: "d", x: 3, y: 1, w: 3, h: 1},
         ];
+
         return (
             <GridLayout
-                className="layout"
+                className={"layout"}
+                layout={layout}
                 autoSize={false}
                 verticalCompact={false}
                 cols={12}
