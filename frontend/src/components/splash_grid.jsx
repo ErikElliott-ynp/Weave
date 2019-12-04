@@ -20,32 +20,32 @@ class SplashGrid extends React.Component {
                 verticalCompact={false}
                 cols={12}
                 rowHeight={350}
-                width={400}
+                width={1000}
             >
                 {/* <h3>Meet the Creators</h3>
                 <div className="creators-header">Meet the Creators</div> */}
 
                 <div key="a">
                     <Paper className="alex-picture">Alex Nguyen
-                    <img src="/Alex_Nguyen1.jpg" alt=""/>
+                    <img className="photo" src="/Alex_Nguyen1.jpg" alt=""/>
                     </Paper>
                 </div>
 
                 <div key="b">
                     <Paper className="erik-picture">Erik Elliott
-                    <img src="/Erik_Elliot.1.jpg" alt="" />
+                    <img className="photo" src="/Erik_Elliot.1.jpg" alt="" />
                     </Paper>
                 </div>
 
                 <div key="c">
                     <Paper className="jeremy-picture">Jeremy Rosenberg
-                    <img src="/Jeremy_Rosenberg.jpg" alt="" />
+                    <img className="photo" src="/Jeremy_Rosenberg.jpg" alt="" />
                     </Paper>
                 </div>
 
                 <div key="d">
                     <Paper className="zak-picture">Zachary Johnson
-                    <img src="/Zak_Johnson.jpg" alt="" />
+                    <img className="photo" src="/Zak_Johnson.jpg" alt="" />
                     </Paper>
                 </div>
 
