@@ -51,9 +51,9 @@
     border: 2px solid black;
 }
 
-.react-grid-layout.layout {
-    background-color: pink;
-}
+// .react-grid-layout.layout {
+//     background-color: pink;
+// }
 
 .inner-box {
     height: 1000px;
@@ -107,7 +107,7 @@ padding-right: 0px;
 /* Element | http://localhost:3000/#/dashboard */
 
 #root > div:nth-child(1) > div:nth-child(2) {
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
@@ -128,6 +128,14 @@ padding-right: 0px;
   width: 300px;
 }
 
+.meet {
+display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: bold;
+    width: auto;
+    margin-right: 99px;
+}
 
 
 

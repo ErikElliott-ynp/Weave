@@ -1,6 +1,7 @@
 import React from "react";
 
 function YoutubeShow(props) {
+    //json key of id is an object when using search API
     let id = "";
     if (typeof props.vidId === "object") {
         id = props.vidId.videoId;
