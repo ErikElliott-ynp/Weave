@@ -7,11 +7,11 @@ class SplashGrid extends React.Component {
     render() {
 
         var layout = [
-            { i: "a", x: 0, y: 0, w: 3, h: .75 },
-            { i: "b", x: 3, y: 0, w: 3, h: .75 },
-            { i: "c", x: 0, y: .75, w: 3, h: .75 },
-            { i: "d", x: 3, y: .75, w: 3, h: .75},
-            // { i: "e", x: 3, y: 1, w: 3, h: .2},
+            { i: "a", x: 0, y: 0, w: 20, h: 10 },
+            { i: "b", x: 20, y: 0, w: 20, h: 10 },
+            { i: "c", x: 0, y: 10, w: 20, h: 10 },
+            { i: "d", x: 20, y: 10, w: 20, h: 10},
+            { i: "e", x: 0, y: 20, w: 40, h: 5}
         ];
 
         return (
@@ -20,8 +20,8 @@ class SplashGrid extends React.Component {
                 layout={layout}
                 autoSize={false}
                 verticalCompact={false}
-                cols={12}
-                rowHeight={350}
+                cols={100}
+                rowHeight={10}
                 width={1000}
             >
                 {/* <h3>Meet the Creators</h3>
@@ -51,9 +51,14 @@ class SplashGrid extends React.Component {
                     </Paper>
                 </div>
 
-                {/* <div key="e">
-                    <Paper className=""></Paper>
-                </div> */}
+                <div key="e">
+                    <Paper className="">
+                        <div className="description">Weave</div>
+                        <div className="description">All in one dashboard.</div>
+                        <div className="description2">drag and drop to experience</div>
+                        <div className="description2">resize with the bottom right corner</div>
+                    </Paper>
+                </div>
 
             </GridLayout>
         );
