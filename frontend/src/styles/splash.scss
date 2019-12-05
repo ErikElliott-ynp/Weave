@@ -213,13 +213,12 @@ div.react-grid-item:nth-child(1) > div:nth-child(1) {
 }
 
 div.react-grid-item:nth-child(5) > div:nth-child(1) {
-  background: #080bbd69;
+  display: flex;
+  background: #080bbd56;
   flex-direction: column;
   align-items: center;
   font-weight: bold;
-  font-weight: bold;
-//   width: 100%;
-//   width: 100%;
+  justify-content: center;
 }
 
 
@@ -307,7 +306,7 @@ h1.MuiTypography-root {
 
 .react-grid-layout {
     background-color: transparent;
-    width: 800px;
+    width: 400px;
     height: 100vh;
 }
 
@@ -317,4 +316,9 @@ h1.MuiTypography-root {
   font-size: 35px;
   font-weight: bold;
   width: auto;
+  margin-left: 58px;
+}
+
+.description2 {
+  font-size: 10px;
 }

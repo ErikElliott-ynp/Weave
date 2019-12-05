@@ -11,7 +11,7 @@ class SplashGrid extends React.Component {
             { i: "b", x: 20, y: 0, w: 20, h: 10 },
             { i: "c", x: 0, y: 10, w: 20, h: 10 },
             { i: "d", x: 20, y: 10, w: 20, h: 10},
-            { i: "e", x: 0, y: 20, w: 40, h: 10}
+            { i: "e", x: 0, y: 20, w: 40, h: 5}
         ];
 
         return (
@@ -55,6 +55,8 @@ class SplashGrid extends React.Component {
                     <Paper className="">
                         <div className="description">Weave</div>
                         <div className="description">All in one dashboard.</div>
+                        <div className="description2">drag and drop to experience</div>
+                        <div className="description2">resize with the bottom right corner</div>
                     </Paper>
                 </div>
 
