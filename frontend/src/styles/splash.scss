@@ -174,6 +174,8 @@ padding-left: 10px;
 
 div.react-grid-item:nth-child(3) > div:nth-child(1) {
   background: #f3a81294;
+  display: block;
+  font-weight: bold;
 //   width: 200px;
 //   height: 300px;
 }
@@ -181,18 +183,32 @@ div.react-grid-item:nth-child(3) > div:nth-child(1) {
 
 div.react-grid-item:nth-child(4) > div:nth-child(1) {
   background: #657eeb9d;
+  display: block;
+  font-weight: bold;
 //   width: 100%;
 //   width: 100%;
 }
 
 div.react-grid-item:nth-child(2) > div:nth-child(1) {
   background: #e4582ea8;
+  display: block;
+  font-weight: bold;
 //   width: 100%;
 //   width: 100%;
 }
 
 div.react-grid-item:nth-child(1) > div:nth-child(1) {
   background: #08a5bd69;
+  display: block;
+  font-weight: bold;
+//   width: 100%;
+//   width: 100%;
+}
+
+div.react-grid-item:nth-child(1) > div:nth-child(1) {
+  background: #080bbd69;
+  display: block;
+  font-weight: bold;
 //   width: 100%;
 //   width: 100%;
 }
@@ -275,9 +291,9 @@ h1.MuiTypography-root {
 }
 
 .photo {
-  height: 80%;
+  height: 69%;
   width: 80%;
-  opacity: 90%;
+  opacity: 85%;
 }
 
 .react-grid-layout {
