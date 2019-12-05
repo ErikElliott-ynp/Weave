@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
+import { signup, login } from '../../actions/session_actions';
 import SignupForm from './session_form2';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 
@@ -39,7 +39,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        process: user => dispatch(signup(user))
+        process: user => dispatch(signup(user)),
+        demo: user => dispatch(login(user))
     }
 }
 export default withStyles(styles)(connect(

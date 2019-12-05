@@ -37,7 +37,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        process: user => dispatch(login(user))
+        process: user => dispatch(login(user)),
+        demo: user => dispatch(login(user))
     }
 }
 

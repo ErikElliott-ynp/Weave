@@ -106,7 +106,7 @@ class SignInSide extends React.Component {
       password: "mountain"
     }
 
-    this.props.process(user);
+    this.props.demo(user);
   }
 
   // Render the session errors if there are any
