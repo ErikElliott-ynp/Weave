@@ -3,7 +3,7 @@ Weave is user-friendly, interactive, and customizable social media application w
 
 ---
 
-![Main](https://user-images.githubusercontent.com/51393952/70079389-8011ba80-15b9-11ea-97c9-6c2df8e4526f.jpg)
+![Main](https://user-images.githubusercontent.com/51393952/70171711-24f8ca00-1684-11ea-8cc8-82507c1002c8.jpg)
 
 ## Demo
 
