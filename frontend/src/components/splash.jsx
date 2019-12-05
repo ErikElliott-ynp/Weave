@@ -62,7 +62,7 @@ class Splash extends React.Component {
             </div>
 
             <div className="flexMeDaddy">
-                <div>MEET THE TEAM</div>
+                <div className="meet">MEET THE TEAM</div>
               <SplashGrid className="splash-grid"/>
             </div>
 

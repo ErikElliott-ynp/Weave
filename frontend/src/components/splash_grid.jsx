@@ -9,8 +9,8 @@ class SplashGrid extends React.Component {
         var layout = [
             { i: "a", x: 0, y: 0, w: 3, h: .75 },
             { i: "b", x: 3, y: 0, w: 3, h: .75 },
-            { i: "c", x: 0, y: 1, w: 3, h: .75 },
-            { i: "d", x: 3, y: 1, w: 3, h: .75},
+            { i: "c", x: 0, y: .75, w: 3, h: .75 },
+            { i: "d", x: 3, y: .75, w: 3, h: .75},
             // { i: "e", x: 3, y: 1, w: 3, h: .2},
         ];
 
