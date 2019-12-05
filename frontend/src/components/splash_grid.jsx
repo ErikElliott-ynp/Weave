@@ -53,7 +53,8 @@ class SplashGrid extends React.Component {
 
                 <div key="e">
                     <Paper className="">
-
+                        <div className="description">Weave</div>
+                        <div className="description">All in one dashboard.</div>
                     </Paper>
                 </div>
 
