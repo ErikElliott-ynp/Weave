@@ -131,7 +131,7 @@ h1.MuiTypography-root {
 
 .bigDaddyFlex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background: transparent;
 }
 .splash-left .banner {
@@ -141,19 +141,21 @@ h1.MuiTypography-root {
 }
 
 .lilHomieForm {
-    display: flex;
-    width: min-content;
+  display: flex;
+  width: 500px;
 }
 
-.lilHomieForm > div:nth-child(1) {
-height: 100vh;
-max-width: 608px;
-padding-right: 10px;
-border-right-width: 0px;
-border-right-style: solid;
-margin-right: 0px;
-padding-left: 10px;
-}
+// .lilHomieForm > div:nth-child(1) {
+//     position: relative;
+//     left: 25px;
+// height: 100vh;
+// width: 490px;
+// padding-right: 10px;
+// border-right-width: 0px;
+// border-right-style: solid;
+// margin-right: 0px;
+// padding-left: 10px;
+// }
 
 
 .MuiPaper-root {
@@ -306,8 +308,8 @@ h1.MuiTypography-root {
 
 .react-grid-layout {
     background-color: transparent;
-    width: 400px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .meet {
