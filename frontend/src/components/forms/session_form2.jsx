@@ -27,28 +27,28 @@ function Copyright() {
   );
 }
 
-const styles = makeStyles(theme => ({
-  root: {
-    height: '100vh',
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
-}));
+// const styles = makeStyles(theme => ({
+//   root: {
+//     height: '100vh',
+//   },
+//   paper: {
+//     margin: theme.spacing(8, 4),
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//   },
+//   avatar: {
+//     margin: theme.spacing(1),
+//     backgroundColor: theme.palette.secondary.main,
+//   },
+//   form: {
+//     width: '100%', // Fix IE 11 issue.
+//     marginTop: theme.spacing(1),
+//   },
+//   submit: {
+//     margin: theme.spacing(3, 0, 2),
+//   },
+// }));
 
 class SignInSide extends React.Component {
   constructor(props) {
@@ -223,19 +223,19 @@ class SignInSide extends React.Component {
               >
                 {this.props.formName}
               </Button>
-
+              
+              <Button
+                id="demo-button"
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+                onClick={() => this.handleDemo()}
+              >
+                Demo
+                </Button>
             </form>
-            <Button
-              id="demo-button"
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-              onClick={() => this.handleDemo()}
-            >
-              Demo
-              </Button>
 
               <Box mt={5}>
                 <Copyright />

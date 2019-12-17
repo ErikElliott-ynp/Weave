@@ -131,7 +131,7 @@ h1.MuiTypography-root {
 
 .bigDaddyFlex {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background: transparent;
 }
 .splash-left .banner {
@@ -141,19 +141,21 @@ h1.MuiTypography-root {
 }
 
 .lilHomieForm {
-    display: flex;
-    width: min-content;
+  display: flex;
+  width: 500px;
 }
 
-.lilHomieForm > div:nth-child(1) {
-height: 100vh;
-max-width: 608px;
-padding-right: 10px;
-border-right-width: 0px;
-border-right-style: solid;
-margin-right: 0px;
-padding-left: 10px;
-}
+// .lilHomieForm > div:nth-child(1) {
+//     position: relative;
+//     left: 25px;
+// height: 100vh;
+// width: 490px;
+// padding-right: 10px;
+// border-right-width: 0px;
+// border-right-style: solid;
+// margin-right: 0px;
+// padding-left: 10px;
+// }
 
 
 .MuiPaper-root {
@@ -254,20 +256,20 @@ h1.MuiTypography-root {
 
 #sign-up {
   position: relative;
-  left: -120px;
+  left: -60px;
   top: 270px;
-  width: max-content;
+  white-space: nowrap;
 }
 
 #login {
   position: relative;
-  left: -58px;
+  left: 0px;
   top: 348px;
 }
 
 #signup-a {
   position: relative;
-  right: 214px;
+  right: 192px;
   background: transparent;
   color: #3474ff;
   overflow: visible;
@@ -276,7 +278,7 @@ h1.MuiTypography-root {
 }
 
 #login-a {
-  right: 212px;
+  right: 192px;
   position: relative;
   background: transparent;
   color: #3474ff;
@@ -294,7 +296,7 @@ h1.MuiTypography-root {
 }
 
 .MuiAvatar-root {
-  right: 212px;
+  right: 192px;
   position: relative;
 }
 
@@ -307,8 +309,8 @@ h1.MuiTypography-root {
 
 .react-grid-layout {
     background-color: transparent;
-    width: 400px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .meet {

@@ -103,6 +103,7 @@ padding-right: 0px;
 .lilHomieForm > div:nth-child(1) > div:nth-child(1) {
   padding-right: 10px;
   padding-left: 10px;
+  margin-left: 50px;
 }
 
 /* Element | http://localhost:3000/#/dashboard */
@@ -114,10 +115,10 @@ padding-right: 0px;
 
 /* Inline #11 | http://localhost:3000/#/dashboard */
 
-.MuiPopover-paper {
-  max-width: calc(35% - 32px);
-  max-height: calc(30% - 32px);
-}
+// .MuiPopover-paper {
+//   max-width: calc(35% - 32px);
+//   max-height: calc(30% - 32px);
+// }
 
 .div.react-grid-item:nth-child(1) > div:nth-child(1) {
   overflow: auto;

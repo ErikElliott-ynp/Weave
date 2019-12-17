@@ -17,27 +17,21 @@ class MainGrid extends React.Component {
           <GridLayout
             className=""
             layout={layout}
-            cols={12}
-            width={1750}
-            rowHeight={30}
+            cols={500}
+            width={1000}
+            rowHeight={10}
             draggableCancel="input"
           >
             <div className='YouTube-box' key="a">
-              <Paper className="">
                 <YoutubeList />
-              </Paper>
             </div>
 
             <div className='GoogleNews-box' key="b">
-              <Paper className="">
                 <NewsList />
-              </Paper>
             </div>
 
             <div className='Imgur-box' key="c">
-              <Paper className="">
                 <ImgurList />
-              </Paper>
             </div>
 
 
