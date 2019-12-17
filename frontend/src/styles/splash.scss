@@ -301,9 +301,10 @@ h1.MuiTypography-root {
 }
 
 .photo {
-  height: 69%;
-  width: 80%;
+  height: 85%;
+  width: 90%;
   border-radius: 2%;
+  object-fit: scale-down;
 }
 
 .react-grid-layout {

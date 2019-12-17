@@ -22,6 +22,11 @@ class ImgurList extends React.Component{
         this.setState({ search: e.currentTarget.value })
     }
 
+    handleImgurTop() {
+        this.props.clear();
+        this.props.fetchImages();
+    }
+
     
 render(){
         let imgurArray = <div className="imgur-posts">
@@ -56,7 +61,7 @@ render(){
                     variant="contained"
                     color="primary"
                     className="search-btn"
-                    onClick={() => this.props.fetchImages()}
+                    onClick={() => this.handleImgurTop()}
                 >
                     Top Images
                     </Button>

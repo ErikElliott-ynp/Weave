@@ -6,6 +6,7 @@
 .imgur-posts{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-left: 5%;
 }
 
 .title {
@@ -17,12 +18,17 @@
     margin: 15px;
 }
 
+.imgur-grid {
+    overflow: auto;
+    width: 100%;
+}
+
 #imgr-btn {
     position: relative;
     width: 200px;
     height: 30px;
     margin: 15px 0;
-    left: 120%;
+    left: 38.5%;
 }
 
 #imgur-search {

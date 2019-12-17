@@ -25,6 +25,10 @@
     margin-left: 11px;
 }
 
+.youtube-list {
+    height: 100%;
+}
+
 .playground .youtube-container {
     overflow-y: auto;
 }
@@ -44,4 +48,29 @@
 
 #yt-search {
     margin: 15px 0 15px 135px;
+}
+
+.youtube-cont {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.react-grid-item > .react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 15px !important;
+  cursor: se-resize;
+}
+.react-grid-item > .react-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 15px !important;
+  height: 15px !important;
+  border-right: 2px solid rgba(0, 0, 0, 1) !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 1) !important;
 }
