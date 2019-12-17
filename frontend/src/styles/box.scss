@@ -1,5 +1,5 @@
 .react-grid-item.YouTube-box {
-    visibility: hidden;
+    display: none;
     overflow-y: auto;
     background: #08a4bd;
     border-radius: 10px;
@@ -7,20 +7,20 @@
 }
 
 .GoogleNews-box {
-    visibility: hidden;
+    display: none;
     overflow-y: auto;
     background-color: #e4572e;
     border-radius: 10px;
 }
 
 .Imgur-box {
-    visibility: hidden;
+    display: none;
     overflow-y: auto;
     background: #f3a712; 
     border-radius: 10px;
 }
 
 .Placeholder-box {
-    visibility: hidden;
+    display: none;
 }
 

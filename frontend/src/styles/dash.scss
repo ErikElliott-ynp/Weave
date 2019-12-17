@@ -87,6 +87,7 @@
 div.react-grid-item:nth-child(4) > div:nth-child(1) {
   padding-right: 0px;
   padding-left: 0px;
+  overflow: auto;
 }
 
 /* Inline #1 | http://localhost:3000/#/dashboard */
@@ -116,6 +117,11 @@ padding-right: 0px;
 .MuiPopover-paper {
   max-width: calc(35% - 32px);
   max-height: calc(30% - 32px);
+}
+
+.div.react-grid-item:nth-child(1) > div:nth-child(1) {
+  overflow: auto;
+  margin-left: calc(100%-75px);
 }
 
 .logout-button:hover {

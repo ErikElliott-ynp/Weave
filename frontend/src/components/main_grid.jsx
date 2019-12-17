@@ -10,11 +10,10 @@ class MainGrid extends React.Component {
     render() {
 
         var layout = [
-          { i: "a", x: 3, y: 0, w: 6, h: 2 },
-          { i: "b", x: 0, y: 0, w: 3, h: 8, minW: 2, maxW: 6 },
-          { i: "c", x: 4, y: 0, w: 5, h: 5 },
-          { i: "d", x: 3, y: 0, w: 1, h: 9 },
-          { i: "e", x: 10, y: 0, w: 3, h: 9 },
+          { i: "a", x: 2, y: 0, w: 4.5, h: 10, minW: 4, maxW: 5.5, maxH: 22, minH: 3.5 },
+          { i: "b", x: 2, y: 0, w: 4, h: 8, minW: 2.5, maxW: 8, minH: 6, maxH: 50},
+          { i: "c", x: 2, y: 0, w: 5.5, h: 10, minW: 4.5, MaxW: 6.5, minH: 6, maxH: 50 },
+          { i: "e", x: 2, y: 0, w: 5, h: 8, minW: 1.5, MaxW: 8 },
         ];
         return (
           <GridLayout
