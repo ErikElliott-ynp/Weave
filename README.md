@@ -47,9 +47,9 @@ Weave is user-friendly, interactive, and customizable social media application w
 
 #### Optimizing Frontend Calls
 
-  For testing purposes, we made our frontend calls when the component mounted. We instead decided to have the calls occur when the button for one of our dash items is clicked, thus improving the dashboard's initial load speed.
+  For testing purposes, we made our frontend calls when the component mounted. We instead decided to have the calls occur when the button for one of our dash items is clicked, thus improving the dashboard's initial load speed. The then wait for the promise to resolve before making the resizable box visible.
   
-![Screen Shot 2019-12-03 at 2 13 23 PM](https://user-images.githubusercontent.com/43099538/70095642-253c8b00-15da-11ea-9375-c293a7648f93.png)
+![Screen Shot 2019-12-17 at 7 14 04 PM](https://user-images.githubusercontent.com/43099538/71052870-89df0600-2101-11ea-91e1-6caedd3f4ab5.png)
 
   We then broke down functions that were doing more work so that the code would be more readable. 
   
