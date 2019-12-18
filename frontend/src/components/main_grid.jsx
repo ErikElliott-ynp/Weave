@@ -24,7 +24,7 @@ class MainGrid extends React.Component{
             draggableCancel="input"
           >
             
-            <div className='YouTube-box hidden' id="youtube-box" key="a">
+            <div className='YouTube-box' id="youtube-box" key="a">
                 <YoutubeList />
             </div>
 

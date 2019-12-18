@@ -23,8 +23,10 @@ class ImgurList extends React.Component{
     }
 
     handleImgurTop() {
+        this.props.loading();
         this.props.clear();
-        this.props.fetchImages();
+        setTimeout(() => this.props.fetchImages(), 800);
+        
     }
 
     
