@@ -13,6 +13,7 @@ class YoutubeList extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        this.props.loading();
         this.props.clearVideos();
         this.props.fetchSearch({ topic: this.state.search } )
         this.setState({search: ""   })
