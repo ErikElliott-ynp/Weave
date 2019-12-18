@@ -1,7 +1,7 @@
 import { START_LOADING_MODAL } from "../actions/loading_modal_actions";
 import { RECEIVE_ALL_IMGUR_POSTS } from "../actions/imgur_actions";
 import {  RECEIVE_NEWS_ARTICLES } from "../actions/news_actions";
-import { RECEIVE_VIDEOS } from "../actions/youtube_actions";
+import { RECEIVE_VIDEOS, RECEIVE_VIDEO } from "../actions/youtube_actions";
 
 const LoadingReducer = (state = null, action) => {
     Object.freeze(state);
@@ -13,6 +13,8 @@ const LoadingReducer = (state = null, action) => {
         case RECEIVE_NEWS_ARTICLES:
             return false;
         case RECEIVE_VIDEOS:
+            return false;
+        case RECEIVE_VIDEO:
             return false;
         default:
             return state;

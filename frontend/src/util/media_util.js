@@ -20,7 +20,7 @@ export const handleNews = (event, props) => {
 
     } else if (target.id === "News" && target.innerText === "Off") {
         props.clearNews();
-        document.getElementById("news-box").style.display = "hidden";
+        document.getElementById("news-box").style.display = "none";
     } 
 };
 
