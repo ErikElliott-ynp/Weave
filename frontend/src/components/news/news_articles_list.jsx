@@ -7,7 +7,8 @@ function NewsArticlesList(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.fetchSearchNews(search)
+        props.loading();
+        setTimeout(() => props.fetchSearchNews(search), 1500);
         setSearch("");
     }
 
@@ -21,7 +22,7 @@ function NewsArticlesList(props) {
     return (
         <div className="news-cont">
             <div className="search-cont">
-                <form onSubmit={(e) => handleSubmit(e)}>
+                <form className="search-form" onSubmit={(e) => handleSubmit(e)}>
                     <input type="text" className="search-bar" value={search} onChange={(e) => setSearch(e.currentTarget.value)} placeholder="What topic interests you?"/>
                     <Button
                         id="search-btn"

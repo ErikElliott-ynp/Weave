@@ -32,16 +32,22 @@
     margin-top: 20px;
 }
 
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
 .search-bar {
     margin-right: 10px;
-    max-width: 450px;
-    border-radius: 6px;
+    width: 185px;
+    border-radius: 4px;
     border: 1px black solid;
     outline: none;
-    padding-left: 15px;
+    padding-left: 8px;
     &::placeholder {
         font-family: 'Robot', sans-serif;
-    font-size: 14px;
+        font-size: 14px;
+        padding-right: 5px;
     }
     font-size: 14px;
 }

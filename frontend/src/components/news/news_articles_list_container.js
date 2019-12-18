@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { fetchNewsBySearchTopic} from "../../actions/news_actions";
 import NewsArticlesList from "./news_articles_list";
+import { startLoadingModal } from "../../actions/loading_modal_actions";
 
 const mSTP = state => {
     return {
@@ -11,7 +12,8 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return {
         // fetchMostPopularNews: () => dispatch(fetchNewsMostPopular()),
-        fetchSearchNews: topic => dispatch(fetchNewsBySearchTopic(topic))
+        fetchSearchNews: topic => dispatch(fetchNewsBySearchTopic(topic)),
+        loading: () => dispatch(startLoadingModal()),
     }
 }
 
