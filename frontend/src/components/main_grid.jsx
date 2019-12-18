@@ -10,17 +10,17 @@ class MainGrid extends React.Component{
   }
     render() {
         var layout = [
-          { i: "a", x: 0, y:-1.5, w: 4.5, h: 8, minW: 4, maxW: 8, maxH: 22, minH: 8 },
-          { i: "b", x: 4.7, y: -2, w: 4, h: 8, minW: 2.5, maxW: 8, minH: 6, maxH: 50},
-          { i: "c", x: 2, y: -.5, w: 5.5, h: 10, minW: 4.5, MaxW: 4.5, minH: 6, maxH: 50 },
+          { i: "a", x: 0, y: 0, w: 4.5, h: 15, minW: 4, maxW: 8, maxH: 22, minH: 15 },
+          { i: "b", x: 4.2, y: 0, w: 4, h: 13, minW: 2.5, maxW: 8, minH: 7, maxH: 50},
+          { i: "c", x: 2, y: -.5, w: 5.5, h: 18, minW: 4.5, MaxW: 4.5, minH: 8, maxH: 50 },
         ];
         return (
           <GridLayout
             className=""
             layout={layout}
-            cols={12}  
+            cols={10}  
             width={1750}
-            rowHeight={30}
+            rowHeight={7}
             draggableCancel="input"
           >
             
