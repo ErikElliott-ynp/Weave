@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    if (process.env.NODE_ENV !== "production") {
+        // must use 'require' (import only allowed at top of file)
+        window.getState = store.getState;
+    }
+
     const root = document.getElementById('root');
 
     ReactDOM.render(<Root store={store} />, root);

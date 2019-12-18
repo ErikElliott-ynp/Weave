@@ -34,7 +34,7 @@ const receiveYoutubeErrors = errors => {
 
 export const fetchYoutubeMostPopular = () => dispatch => {
     return YoutubeAPIUtil.backendFetch()
-        .then( videos => dispatch(receiveVideos(videos)),
+        .then( videos => setTimeout( () => dispatch(receiveVideos(videos)), 3000),
         errors => dispatch(receiveYoutubeErrors(errors))
         )
 }

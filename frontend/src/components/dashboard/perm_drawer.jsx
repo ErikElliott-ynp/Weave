@@ -39,6 +39,7 @@ export default function PermDrawer(props) {
     const classes = useStyles();
     const logout = props.logout;
 
+
     return (
         <div className={classes.root}>
             <Drawer

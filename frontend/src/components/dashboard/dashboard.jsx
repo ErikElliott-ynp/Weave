@@ -6,10 +6,13 @@ import DashSearch from './search_bar';
 import PermDrawerContainer from './perm_drawer_container';
 import MenuButton from './menu_button';
 import { Redirect } from 'react-router-dom';
-import LoadingIcon from "../loading"
+import LoadingIcon from "../loading";
+
 
 class Dashboard extends React.Component {
-
+    constructor(props) {
+        super(props)
+    }
     redirect() {
         if (this.props.signedIn === false ) {
           return <Redirect to="/" />
@@ -17,10 +20,14 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        if (loading) return <LoadingIcon />
+        let loading = this.props.loading ? <LoadingIcon /> : null;
+
         return (
             <div>
                 {this.redirect()}
+                {loading}
+                <div className="cssload-loader" id="loading"></div>
+
                 <div>
                     <PermDrawerContainer className="" />
                 </div>
@@ -30,7 +37,7 @@ class Dashboard extends React.Component {
 
 
                 <div className="playground">
-                    <MainGrid />
+                    <MainGrid loading={this.props.loading}/>
                 </div>
             </div>
         );

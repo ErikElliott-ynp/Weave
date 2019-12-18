@@ -38,7 +38,7 @@ export default function MenuButton(props) {
 
   //I plan to separate each social media switch to another file and importing them into this function - Alex
   const buttonHandler = (event) => {
-    this.props.loading();
+    props.loading();
     const target = event.currentTarget;
     //Handles Youtube
     mediaUtil.handleYoutube(event, props);

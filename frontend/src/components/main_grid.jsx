@@ -4,9 +4,11 @@ import YoutubeList from './youtube/youtube_container';
 import NewsList from './news/news_articles_list_container';
 import ImgurList from './imgur/imgur_container';
 
-class MainGrid extends React.Component {
+class MainGrid extends React.Component{
+  constructor(props){
+    super(props)
+  }
     render() {
-
         var layout = [
           { i: "a", x: 0, y:-1.5, w: 4.5, h: 10, minW: 4, maxW: 8, maxH: 22, minH: 3.5 },
           { i: "b", x: 4.7, y: -2, w: 4, h: 8, minW: 2.5, maxW: 8, minH: 6, maxH: 50},
@@ -21,15 +23,16 @@ class MainGrid extends React.Component {
             rowHeight={30}
             draggableCancel="input"
           >
-            <div className='YouTube-box' key="a">
+            
+            <div className='YouTube-box hidden' id="youtube-box" key="a">
                 <YoutubeList />
             </div>
 
-            <div className='GoogleNews-box' key="b">
+            <div className='GoogleNews-box hidden' id="news-box" key="b">
                 <NewsList />
             </div>
 
-            <div className='Imgur-box' key="c">
+            <div className='Imgur-box hidden' id="imgur-box" key="c">
                 <ImgurList />
             </div>
 
