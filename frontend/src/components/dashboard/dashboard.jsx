@@ -26,7 +26,6 @@ class Dashboard extends React.Component {
             <div>
                 {this.redirect()}
                 {loading}
-                <div className="cssload-loader" id="loading"></div>
 
                 <div>
                     <PermDrawerContainer className="" />
