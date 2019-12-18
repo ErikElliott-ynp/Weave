@@ -6,6 +6,7 @@ import DashSearch from './search_bar';
 import PermDrawerContainer from './perm_drawer_container';
 import MenuButton from './menu_button';
 import { Redirect } from 'react-router-dom';
+import LoadingIcon
 
 class Dashboard extends React.Component {
 
@@ -16,6 +17,7 @@ class Dashboard extends React.Component {
     }
 
     render() {
+        if (loading) 
         return (
             <div>
                 {this.redirect()}

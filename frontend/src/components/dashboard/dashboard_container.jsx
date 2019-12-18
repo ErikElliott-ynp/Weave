@@ -3,7 +3,8 @@ import Dashboard from './dashboard';
 
 const mSTP = state => {
     return {
-        signedIn: !!state.session.user
+        signedIn: !!state.session.user,
+        loading: state.ui.loading
     }
 };
 
