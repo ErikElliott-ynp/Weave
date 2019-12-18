@@ -28,10 +28,11 @@
 
 .playground {
     width: 75%;
-    height: 80%;
+    height: 100%;
     position: absolute;
-    left: 125px;
-    top: 100px;
+    top: 20px;
+    width: 91%;
+    left: 162px;
     // background-color: pink;
 }
 
@@ -62,13 +63,6 @@
 
 /* Inline #1 | http://localhost:3000/#/dashboard */
 
-.playground {
-  /* width: 75%; */
-  /* height: 80%; */
-  /* left: 125px; */
-  width: 91%;
-  left: 162px;
-}
 
 /* Element | http://localhost:3000/#/dashboard */
 
