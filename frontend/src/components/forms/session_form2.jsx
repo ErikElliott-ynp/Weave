@@ -105,7 +105,8 @@ class SignInSide extends React.Component {
       email: "b@gmail.com",
       password: "mountain"
     }
-
+    
+    this.setState({ email: user.email, password: user.password, password2: user.password });
     this.props.demo(user);
   }
 
