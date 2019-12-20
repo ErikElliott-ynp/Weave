@@ -255,15 +255,15 @@ h1.MuiTypography-root {
 }
 
 #sign-up {
-  position: relative;
-  left: -60px;
+  position: absolute;
+  left: 480px;
   top: 270px;
   white-space: nowrap;
 }
 
 #login {
-  position: relative;
-  left: 0px;
+  position: absolute;
+  left: 543px;
   top: 348px;
 }
 
@@ -324,4 +324,8 @@ h1.MuiTypography-root {
 
 .description2 {
   font-size: 10px;
+}
+
+.lilHomieform {
+  position: relative;
 }
