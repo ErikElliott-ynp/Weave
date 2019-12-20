@@ -46,7 +46,6 @@ render(){
                 {/* <form id="imgur-search" onSubmit={(e) => this.handleSubmit(e)}>
                     <input type="text" className="search-bar" value={this.state.search} onChange={(e) => this.handleChange(e)} placeholder="What are you looking?" />
                     <Button
-                        id="search-btn"
                         type="submit"
                         fullWidth
                         variant="contained"
