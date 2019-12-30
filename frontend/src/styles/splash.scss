@@ -141,6 +141,7 @@ h1.MuiTypography-root {
 }
 
 .lilHomieForm {
+  position: relative;
   display: flex;
   width: 500px;
 }
@@ -256,14 +257,14 @@ h1.MuiTypography-root {
 
 #sign-up {
   position: absolute;
-  left: 480px;
+  right: -78px;
   top: 270px;
   white-space: nowrap;
 }
 
 #login {
   position: absolute;
-  left: 543px;
+  right: -76px;
   top: 348px;
 }
 
@@ -326,6 +327,3 @@ h1.MuiTypography-root {
   font-size: 10px;
 }
 
-.lilHomieform {
-  position: relative;
-}
